@@ -11,7 +11,7 @@ name: Xu Chi's blog
 email: xuchi16@126.com
 url: lukathis.github.io
 description: > # this means to ignore newlines until "baseurl:"
-  A civil engineering who's dreaming to start a brand new career.
+  A civil engineer who's dreaming to start a brand new career.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://Lukathis.github.io" # the base hostname & protocol for your site
 twitter_username: GFW
