@@ -32,6 +32,38 @@ date:   2016-05-30 11:22:34 +0800
 
 <br />
 
+---
+
+<br />
+
+## 【使用pyenv的virtualenv插件搭建多版本虚拟环境】
+
+详情可见github主页:[pyenv-virtual Github](https://github.com/yyuu/pyenv-virtualenv)
+
+
+# 在现在的pyenv环境下配置虚拟环境
+
+      $ pyenv version
+      3.4.3 (set by ~/.pyenv/version)
+      $ pyenv virtualenv venv34
+
+# 创建特定版本的虚拟环境
+
+      $ pyenv virtualenv 2.7.10 my-virtual-env-2.7.10
+
+后部分即命名，存储位置统一在~/.pyenv/verions下
+
+# 使用虚拟环境
+
+      $ pyenv activate <name>
+      $ pyenv deactivate
+
+<br />
+
+---
+
+<br />
+
 ### 使用pip安装第三方模块注意点
 
 注意理解，pyenv实际上是在PATH中加入了“垫片”(Shims)从而使得可以优先控制使用pyenv下安装的Python版本从而达到多版本控制的目的，故而：
