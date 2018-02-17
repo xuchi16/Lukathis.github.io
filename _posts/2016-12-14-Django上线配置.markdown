@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Django上线配置"
+---
+
+
+
+# 【PREFACE】
+
+  Django的上线配置采用的是在Ubuntu系统上搭建的Django+Nginx+uWSGI的结构配置。
+
+
+# 【结论】
+
+  至此可以完整地跑整套系统了，接下来的主要工作需要细化网站功能进行开发，实现备案并在国内上线。
+
+
+# 【参考内容】
+
+  [Setting up Django and your web server with uWSGI and nginx](http://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html)
