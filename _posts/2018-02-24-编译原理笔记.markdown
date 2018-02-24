@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "编译原理笔记"
+---
+
+
+
+# 第三单元：词法分析
+
+## [XC]Overview
+
+  *RE* -1.Thompson算法-> *NFA* -2.子集构造算法-> *DFA* -3.Hopcroft最小化算法 -> *词法分析器代码*
+
+## 子集构造算法
+
+[XC] 子集构造算法作用
+
+    q0 <- eps_closure(n0) // 计算起始点的闭包，确定DFA的起始节点的边界
+    Q <- {q0}
+    workList <- q0 // worklist可以使用队列实现
+    while (workList != [])
+      remove q from workList
+      foreach (character c)
+        t <- eps_closure(delta(q, c))
+        D[q, c] <- t
+        if (t not in Q)
+          add t to Q and workList
+
+## DFA最小化
