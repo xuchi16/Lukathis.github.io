@@ -3,15 +3,15 @@ layout: post
 title:  "编译原理笔记"
 ---
 
+---
 
+# 3. 第三单元：词法分析
 
-# 第三单元：词法分析
+## 3.1 [XC]Overview
 
-## [XC]Overview
+  **RE** -1.Thompson算法-> **NFA** -2.子集构造算法-> **DFA** -3.Hopcroft最小化算法 -> **词法分析器代码**
 
-  *RE* -1.Thompson算法-> *NFA* -2.子集构造算法-> *DFA* -3.Hopcroft最小化算法 -> *词法分析器代码*
-
-## 子集构造算法
+## 3.2 子集构造算法
 
 [XC] 子集构造算法作用
 
@@ -26,4 +26,4 @@ title:  "编译原理笔记"
         if (t not in Q)
           add t to Q and workList
 
-## DFA最小化
+## 3.3 DFA最小化
