@@ -30,6 +30,7 @@ Step3. 写脚本跑脚本（最有趣的部分）
 * write_content(wtable, target_row, rtable)向目标table中拷贝源rtable的特定行
 * assemble()则是业务逻辑，组织从分散的表到最终汇总表的映射关系
 
+```
         import xlrd, xlwt, os
 
         class AssembleClient:
@@ -92,6 +93,7 @@ Step3. 写脚本跑脚本（最有趣的部分）
 
         ac = AssembleClient(SOURCE_PATH, SOURCE_ROW, COLUMN_RANGE, "result", "sheet")
         ac.assemble()
+```
 
 ## 小结
 
