@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Operating System"
+---
+
+# Operating System
+
+# Resource list
+
+* [Course](http://www.cs.cmu.edu/~213/schedule.html)
+* [Vedio](https://www.bilibili.com/video/av12977597/)
+* [Lab](http://csapp.cs.cmu.edu/3e/labs.html)
