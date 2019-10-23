@@ -1,0 +1,27 @@
+I"<h1 id="configurations-for-github-gradle-and-intellij">Configurations for Github, Gradle and IntelliJ</h1>
+
+<ul>
+  <li>Step 1. Create an empty repository in Github</li>
+  <li>Step 2. Clone the project to local</li>
+  <li>Step 3. Open IntelliJ and select open this project</li>
+  <li>Step 4. Select “Import project from external model”</li>
+  <li>Step 5. Because this is a new project, so we can select “Create directories for empty content roots automatically” and choose “use gradle wrapper task for configuration” and click “Finish”</li>
+  <li>Step 6. After gradle finish loading all the configurations. Open the Gradle tab and select “init” task.</li>
+  <li>Step 7. If there’s no corresponding src module, just right click the projeck and create a new module named ‘src’. Gradle will automatically create main and test folder for us.</li>
+</ul>
+
+<p>The environment is ready.</p>
+
+<h2 id="tips">Tips:</h2>
+<ul>
+  <li>If you want to run gradle script, please use the gradlew in your project’s root folder, e.g. ./gradlew init or use brew to install gradle</li>
+</ul>
+
+<h1 id="references">References</h1>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=JwPYjnhah3g">Working with Gradle in IntelliJ</a></li>
+</ul>
+
+<p>This is updated from new iPadOS</p>
+:ET
