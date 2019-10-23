@@ -16,9 +16,11 @@ title:  "IntelliJ on Mac"
 The environment is ready.
 
 ## Tips:
-* 1. If you want to run gradle script, please use the gradlew in your project's root folder, e.g. ./gradlew init or use brew to install gradle
+* If you want to run gradle script, please use the gradlew in your project's root folder, e.g. ./gradlew init or use brew to install gradle
 
 
 # References
 
 * [Working with Gradle in IntelliJ](https://www.youtube.com/watch?v=JwPYjnhah3g)
+
+This is updated from new iPadOS 
