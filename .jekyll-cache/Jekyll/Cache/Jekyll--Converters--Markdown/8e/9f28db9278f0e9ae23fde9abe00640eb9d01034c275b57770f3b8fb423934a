@@ -1,7 +1,0 @@
-I"<p>#Install Jekyll</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">  <span class="err">$</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span>
-  <span class="err">$</span> <span class="n">jekyll</span> <span class="n">new</span> <span class="n">myblog</span>
-  <span class="err">$</span> <span class="n">cd</span> <span class="n">myblog</span>
-  <span class="o">~</span><span class="sr">/myblog $ jekyll serve</span></code></pre></figure>
-:ET
