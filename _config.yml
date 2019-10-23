@@ -20,3 +20,9 @@ copyright: Xu Chi. All rights reserved.
 
 # Build settings
 markdown: kramdown
+
+# Plugins
+plugins:
+  - jekyll-include-cache
+
+remote_theme: "mmistakes/minimal-mistakes@4.17.1"
