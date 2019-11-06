@@ -1,0 +1,53 @@
+---
+layout: post
+title:  "React"
+date:   2019-11-06 17:00:00 +0800
+---
+
+-----------------------------------------------------
+# Target and Schedule
+
+## Target
+
+Stage 1. Develop an app with two windows side by side. Left side show plain text or markdown text and right side be able to render markdown to HTML or other format.
+
+## Schedule
+* Go through tutorial and sample project
+* Conclude 
+* Develop Stage1
+
+-----------------------------------------------------
+# Try React
+## Online Playground
+
+* Codepen: <https://codepen.io/pen/?&editable=true>
+* CodeSandbox: <https://codesandbox.io/s/new>
+
+## Learn React
+Different learning styles: theoretical/practical. Was always learning by concepts, and this time planned to learn by doing and grab concepts when taking metro. Learning curve is another magic thing, different people have different opinion on this. When learning React, need to measure it.
+
+* HOME: <https://reactjs.org/tutorial/tutorial.html>
+* METRO: <https://reactjs.org/docs/hello-world.html>
+
+-----------------------------------------------------
+# Blog
+
+### Day 1. Go through Git introduction
+-----------------------------------------------------
+# Questions and answers
+
+### What's node and React Native mentioned in React's Readme: _"React can also render on the server using Node and power mobile apps using React Native._"
+
+### What does it mean _"Add React to a Website as a <script> tag in one minute"_
+
+### What's the difference between different licenses? e.g. MIT and so on
+
+### What is JSX?
+A. An XML-like syntax.
+
+-----------------------------------------------------
+# References
+
+* Github: <https://github.com/facebook/react>
+* Getting started: <https://reactjs.org/docs/getting-started.html>
+* Online playground: <https://reactjs.org/docs/getting-started.html#online-playgrounds> 
