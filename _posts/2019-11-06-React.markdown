@@ -36,16 +36,16 @@ Different learning styles: theoretical/practical. Was always learning by concept
 -----------------------------------------------------
 # Questions and answers
 
-### What's node and React Native mentioned in React's Readme: _"React can also render on the server using Node and power mobile apps using React Native._"
+* What's node and React Native mentioned in React's Readme: _"React can also render on the server using Node and power mobile apps using React Native._"
 
-### What does it mean _"Add React to a Website as a <script> tag in one minute"_
+* What does it mean _"Add React to a Website as a <script> tag in one minute"_
 
-### What's the difference between different licenses? e.g. MIT and so on
+* What's the difference between different licenses? e.g. MIT and so on
 
-### What is JSX?
+* What is JSX?
 A. An XML-like syntax.
 
-### Cannot understand sample _"A Stateful Component"_ in reactjs.org, where it defined tick per sec?
+* Cannot understand sample _"A Stateful Component"_ in reactjs.org, where it defined tick per sec?
 A. The method componentDidMount() defines the interval as 1000 which is 1 second. And seems that this.interval is an internal field of React.Component.
 
 -----------------------------------------------------
