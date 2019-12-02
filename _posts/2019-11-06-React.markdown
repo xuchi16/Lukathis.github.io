@@ -48,6 +48,8 @@ A. An XML-like syntax.
 * Cannot understand sample _"A Stateful Component"_ in reactjs.org, where it defined tick per sec?
 A. The method componentDidMount() defines the interval as 1000 which is 1 second. And seems that this.interval is an internal field of React.Component.
 
+* What is react hook?
+
 -----------------------------------------------------
 # References
 

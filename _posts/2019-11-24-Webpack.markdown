@@ -1,0 +1,49 @@
+---
+layout: post
+title:  "Webpack introduction"
+date:   2019-11-24 20:00:00 +0800
+---
+
+-----------------------------------------------------
+# Concepts
+
+## Introduction
+
+webpack is a bundler for modules. The main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
+
+-----------------------------------------------------
+# Target and Schedule
+
+## Target
+
+## Schedule
+
+-----------------------------------------------------
+# Blog
+
+-----------------------------------------------------
+# Questions and answers
+
+* What is yarn?
+
+A. Fast, reliable, and secure dependency management tool. Yarn<https://www.yarnpkg.com/lang/en/>
+
+* Npm install stuck/slow?
+
+A. Need to use a mirror
+
+      // Check the source
+      npm config get registry
+
+      // Mapping to taobao
+      npm config set registry http://registry.npm.taobao.org
+
+
+-----------------------------------------------------
+# References
+
+* Git repo: <https://github.com/webpack/webpack>
+
+* Document : <https://www.webpackjs.com/guides/getting-started/>
+
+* Introduction from SegmentFault: <https://segmentfault.com/a/1190000006178770?utm_source=tag-newest>
