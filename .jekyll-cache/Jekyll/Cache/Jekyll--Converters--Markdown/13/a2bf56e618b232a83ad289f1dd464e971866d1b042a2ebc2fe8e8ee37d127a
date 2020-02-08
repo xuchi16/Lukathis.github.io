@@ -1,0 +1,93 @@
+I"z<blockquote>
+  <p>终归还是要学Python3</p>
+</blockquote>
+
+<h2 id="pyenv">pyenv</h2>
+
+<p><strong>【作用】</strong>  pyenv是一个用于维护不同版本python的插件，详情可见其Github首页：<a href="https://github.com/yyuu/pyenv#homebrew-on-mac-os-x">pyenv Github</a></p>
+
+<p><strong>【理解】</strong>  pyenv 的美好之处在于，他并没有使用将不同的 $PATH 植入不同的 shell 这种高耦合的工作方式，而是简单地在 $PATH 的最前面插入了一个垫片路径（shims）：~/.pyenv/shims:/usr/local/bin:/usr/bin:/bin。所有对 Python 可执行文件的查找都会首先被这个 shims 路径截获，从而架空了后面的系统路径。</p>
+
+<p><br /></p>
+
+<h3 id="基本操作">基本操作</h3>
+
+<p><strong>【安装/卸载不同版本Python】</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ pyenv install -v 3.4.3
+  $ pyenv uninstall 3.4.3
+</code></pre></div></div>
+
+<p><strong>【为所有已安装的可执行文件创建shims】</strong>每次增删了Python版本或其他可执行文件的包后均应执行</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ pyenv rehash
+</code></pre></div></div>
+
+<p><strong>【设置全局/本地Python版本】</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ pyenv global 3.4.3
+  $ pyenv local 2.7.3
+</code></pre></div></div>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="使用pyenv的virtualenv插件搭建多版本虚拟环境">【使用pyenv的virtualenv插件搭建多版本虚拟环境】</h2>
+
+<p>详情可见github主页:<a href="https://github.com/yyuu/pyenv-virtualenv">pyenv-virtual Github</a></p>
+
+<h1 id="在现在的pyenv环境下配置虚拟环境">在现在的pyenv环境下配置虚拟环境</h1>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ pyenv version
+  3.4.3 (set by ~/.pyenv/version)
+  $ pyenv virtualenv venv34
+</code></pre></div></div>
+
+<h1 id="创建特定版本的虚拟环境">创建特定版本的虚拟环境</h1>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ pyenv virtualenv 2.7.10 my-virtual-env-2.7.10
+</code></pre></div></div>
+
+<p>后部分即命名，存储位置统一在~/.pyenv/verions下</p>
+
+<h1 id="使用虚拟环境">使用虚拟环境</h1>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ pyenv activate &lt;name&gt;
+  $ pyenv deactivate
+</code></pre></div></div>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h3 id="使用pip安装第三方模块注意点">使用pip安装第三方模块注意点</h3>
+
+<p>注意理解，pyenv实际上是在PATH中加入了“垫片”(Shims)从而使得可以优先控制使用pyenv下安装的Python版本从而达到多版本控制的目的，故而：</p>
+
+<ul>
+  <li>
+    <p>如果使用sudo pip时，会安装在系统自带的Python版本下，Mac系统为2.7</p>
+  </li>
+  <li>
+    <p>若想要安装在自己配置的新Python环境中，需到~/.pyenv/versions下看该环境的pip版本，如3.4.3，则使用命令 pip3.4 install Pillow即可</p>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="几个比较好的博文链接">几个比较好的博文链接</h3>
+
+<ul>
+  <li>
+    <p>【一个理解较为全面的博文】<a href="http://my.oschina.net/lionets/blog/267469">lionets</a></p>
+  </li>
+  <li>
+    <p>【一个关于Mac下错误解释较全面的博文】<a href="http://www.codeweblog.com/%E8%AE%B0%E5%BD%95mac%E4%B8%8B%E5%AE%89%E8%A3%85pyenv%E6%97%B6%E6%89%80%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">Anonymous</a></p>
+  </li>
+</ul>
+:ET

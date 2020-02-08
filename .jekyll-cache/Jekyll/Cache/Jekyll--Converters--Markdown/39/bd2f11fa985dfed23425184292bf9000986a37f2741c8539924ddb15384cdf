@@ -1,0 +1,303 @@
+I"t'
+<h1 id="what-is-markdown">What is Markdown</h1>
+
+<blockquote>
+  <p>Markdown is a lightweight markup language with plain text formatting syntax. It is designed so that it can be converted to HTML and many other formats using a tool by the same name.[8] Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor. As the initial description of Markdown contained ambiguities and unanswered questions, many implementations and extensions of Markdown appeared over the years to answer these issues.
+– From Wikipedia</p>
+</blockquote>
+
+<h1 id="1-区块元素">1. 区块元素</h1>
+
+<h2 id="11-标题-titles">1.1 标题 Titles</h2>
+
+<p>Markdown支持两种标题语法。</p>
+
+<ul>
+  <li>
+    <p>Setext</p>
+
+    <p>可以使用超过2个数量的 = 或者 - 符号均可起到效果</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  This is a HEAD1
+  ===
+  This is a HEAD2
+  ---
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Atx</p>
+
+    <p>在行首插入1到6个 #，表示1到6阶</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # This is a HEAD1
+  ## This is a HEAD2
+  ###### This is a HEAD6
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="12-区块引用-blockquotes">1.2 区块引用 Blockquotes</h2>
+
+<ul>
+  <li>
+    <p>使用 &gt; 符号进行引用，可以嵌套</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &gt; This is the first level of quoting.
+  &gt;
+  &gt;&gt; This is a nested blockquote.
+  &gt;
+  &gt; Still the first level.
+</code></pre></div>    </div>
+
+    <p>效果如下：</p>
+
+    <blockquote>
+      <p>This is the first level of quoting.</p>
+
+      <blockquote>
+        <p>This is a nested blockquote.</p>
+      </blockquote>
+
+      <p>Still the first level.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="13-段落和换行">1.3 段落和换行</h2>
+
+<p>换行可以通过 <code class="highlighter-rouge">&lt;br /&gt;</code> 实现或者插入两个以上的空格然后回车 。</p>
+
+<h2 id="14-列表">1.4 列表</h2>
+
+<p>列表实现方法有多种，可以使用 * ， + ， - 等符号，也可以使用数字加英文句号。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* Blue  
+* Red
+* Yellow
+</code></pre></div></div>
+
+<p>效果为：</p>
+
+<ul>
+  <li>Blue</li>
+  <li>Red</li>
+  <li>Yellow</li>
+</ul>
+
+<p>特别注意，如果句首刚好为数字+英文句号+文字，需要加反斜杠转换，如：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  1986. An awesome year.
+</code></pre></div></div>
+
+<p>需要取得想要的效果，必须输入：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  1986.\ An awesome year.
+</code></pre></div></div>
+
+<p>效果方为：</p>
+
+<p>1986. An awesome year.</p>
+
+<h2 id="15-代码区块">1.5 代码区块</h2>
+
+<p>简单地缩进4个空格或2个制表符即可，一个代码块会一直持续到没有缩进的哪一行。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is code field.
+</code></pre></div></div>
+
+<h2 id="16-分隔线">1.6 分隔线</h2>
+
+<p>在一行中使用三个及三个以上的 * 或者 - 来建立分隔线，如：</p>
+
+<hr />
+
+<h1 id="2-区段元素">2. 区段元素</h1>
+
+<h2 id="21-链接">2.1 链接</h2>
+
+<p>Markdown 支持两种形式的链接语法： 行内式和参考式两种形式。</p>
+
+<p>不管是哪一种，链接文字都是用 [方括号] 来标记。</p>
+
+<ul>
+  <li>
+    <p>行内式：要建立一个行内式的链接，只要在方块括号后面紧接着圆括号并插入网址链接即可，
+如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可，例如：</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  This is [an example](http://example.com/ "Title") inline link.
+
+  [This link](http://example.net/) has no title attribute.
+</code></pre></div>    </div>
+
+    <p>效果如下：</p>
+
+    <p>This is <a href="http://example.com/" title="Title">an example</a> inline link.</p>
+
+    <p><a href="http://example.net/">This link</a> has no title attribute.</p>
+  </li>
+  <li>
+    <p>参考式： 在链接文字的方括号后再加一个方括号，填入用以标识链接的标记，如：</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  This is [my blog] [blog address].
+</code></pre></div>    </div>
+
+    <p>接着在文件的任意处将标记内容定义出来：</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   [blog address]: http://lukathis.github.io/ "Option title here"
+</code></pre></div>    </div>
+
+    <p>链接内容定义的形式为：</p>
+
+    <ul>
+      <li>方括号（前面可以选择性地加上至多三个空格来缩进），里面输入链接文字</li>
+      <li>接着一个冒号</li>
+      <li>接着一个以上的空格或制表符</li>
+      <li>接着链接的网址，也可以用尖括号&lt;&gt;包起来</li>
+      <li>选择性地接着 title 内容，可以用单引号、双引号或是括弧包着，文章中引用此单词即可有链接</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="22-强调">2.2 强调</h2>
+
+<p>Markdown 使用星号（ * ）和底线（ _ ）作为标记强调字词的符号，被 * 或 _ 包围的字词
+会被转成用 em 标签包围，用两个 * 或 _ 包起来的话，则会被转成 strong。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>这段文字包含了两种强调方法，如 *强调1* 和 _强调1_，
+如果使用两个则会变为粗体，如 **强调2** 和 __强调2__。
+</code></pre></div></div>
+
+<p>效果为：</p>
+
+<p>这段文字包含了两种强调方法，如 <em>强调1</em> 和 <em>强调1</em>，
+如果使用两个则会变为粗体，如 <strong>强调2</strong> 和 <strong>强调2</strong>。</p>
+
+<h2 id="23--代码">2.3  代码</h2>
+
+<p>如果需要标记一小段行内代码，可使用反引号将其表记起来（<code class="highlighter-rouge">`</code>），如果需要在代码块内插入反引号，
+  则可用多个反引号来开启及关闭代码区段。</p>
+
+<h2 id="24-图片">2.4 图片</h2>
+
+<p>图片也分为行内式和参考式两种。</p>
+
+<ul>
+  <li>
+    <p>行内式</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Alt text](/path/to/img.jpg)
+![Alt text](/path/to/img.jpg "Optional title")
+</code></pre></div>    </div>
+
+    <p>即：</p>
+    <ul>
+      <li>一个感叹号<code class="highlighter-rouge">!</code></li>
+      <li>一个方括号，里面放上图片的替代文字</li>
+      <li>一个普通括号，里面放上图片的网址，引用括号包住，并加上选择性的title文字</li>
+    </ul>
+  </li>
+  <li>
+    <p>参考式</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Alt text][id]
+</code></pre></div>    </div>
+
+    <p>[id]是图片的参考名称，定义方式与链接的参考一样。</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[id]: url/to/image "Optional title attribute"
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<hr />
+
+<h1 id="3-其他">3. 其他</h1>
+
+<h2 id="31-自动链接">3.1 自动链接</h2>
+
+<p>一般，用尖括号包起来，Markdown将自动转化成链接。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;http://lukathis.github.io&gt;
+  &lt;xuchi16@126.com&gt;
+</code></pre></div></div>
+
+<p>效果为：</p>
+
+<p><a href="http://lukathis.github.io">http://lukathis.github.io</a></p>
+
+<p><a href="mailto:xuchi16@126.com">xuchi16@126.com</a></p>
+
+<h2 id="32-反斜杠">3.2 反斜杠</h2>
+
+<p>Markdown可以利用反斜杠来插入一些在语法中有其他意义的符号，Markdown支持以下符号：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">符号</th>
+      <th style="text-align: center">名称</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">\</td>
+      <td style="text-align: center">反斜线</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">`</td>
+      <td style="text-align: center">反引号</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">*</td>
+      <td style="text-align: center">星号</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">_</td>
+      <td style="text-align: center">底线</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">{}</td>
+      <td style="text-align: center">花括号</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">[]</td>
+      <td style="text-align: center">方括号</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">()</td>
+      <td style="text-align: center">括弧</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">#</td>
+      <td style="text-align: center">井字号</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">加号</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">减号</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">.</td>
+      <td style="text-align: center">英文句点</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">!</td>
+      <td style="text-align: center">惊叹号</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="推荐">推荐</h2>
+<p>推荐一个很好用的在线markdown生成公众号文章的转换利器：http://md.aclickall.com</p>
+
+<blockquote>
+  <p>We believe that writing is about content, about what you want to say – not about fancy formatting.</p>
+
+  <p>我们坚信写作写的是内容，所思所想，而不是花样格式。</p>
+
+  <p>— Ulysses for Mac</p>
+</blockquote>
+:ET

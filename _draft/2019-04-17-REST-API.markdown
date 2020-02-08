@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "IntelliJ on Mac"
+title:  "REST API"
 ---
 
 # Configurations for Github, Gradle and IntelliJ

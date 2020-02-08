@@ -1,0 +1,71 @@
+I"�
+<hr />
+<h1 id="target-and-schedule">Target and Schedule</h1>
+
+<h2 id="target">Target</h2>
+
+<p>Stage 1. Develop an app with two windows side by side. Left side show plain text or markdown text and right side be able to render markdown to HTML or other format.</p>
+
+<h2 id="schedule">Schedule</h2>
+<ul>
+  <li>Go through tutorial and sample project</li>
+  <li>Conclude</li>
+  <li>Develop Stage1</li>
+</ul>
+
+<hr />
+<h1 id="try-react">Try React</h1>
+<h2 id="online-playground">Online Playground</h2>
+
+<ul>
+  <li>Codepen: <a href="https://codepen.io/pen/?&amp;editable=true">https://codepen.io/pen/?&amp;editable=true</a></li>
+  <li>CodeSandbox: <a href="https://codesandbox.io/s/new">https://codesandbox.io/s/new</a></li>
+</ul>
+
+<h2 id="learn-react">Learn React</h2>
+<p>Different learning styles: theoretical/practical. Was always learning by concepts, and this time planned to learn by doing and grab concepts when taking metro. Learning curve is another magic thing, different people have different opinion on this. When learning React, need to measure it.</p>
+
+<ul>
+  <li>HOME: <a href="https://reactjs.org/tutorial/tutorial.html">https://reactjs.org/tutorial/tutorial.html</a></li>
+  <li>METRO: <a href="https://reactjs.org/docs/hello-world.html">https://reactjs.org/docs/hello-world.html</a></li>
+</ul>
+
+<hr />
+<h1 id="blog">Blog</h1>
+
+<h3 id="day-1-go-through-git-introduction">Day 1. Go through Git introduction</h3>
+<hr />
+<h1 id="questions-and-answers">Questions and answers</h1>
+
+<ul>
+  <li>
+    <p>What’s node and React Native mentioned in React’s Readme: <em>“React can also render on the server using Node and power mobile apps using React Native.</em>”</p>
+  </li>
+  <li>
+    <p>What does it mean _“Add React to a Website as a <script> tag in one minute"_</script></p>
+  </li>
+  <li>
+    <p>What’s the difference between different licenses? e.g. MIT and so on</p>
+  </li>
+  <li>
+    <p>What is JSX?
+A. An XML-like syntax.</p>
+  </li>
+  <li>
+    <p>Cannot understand sample <em>“A Stateful Component”</em> in reactjs.org, where it defined tick per sec?
+A. The method componentDidMount() defines the interval as 1000 which is 1 second. And seems that this.interval is an internal field of React.Component.</p>
+  </li>
+  <li>
+    <p>What is react hook?</p>
+  </li>
+</ul>
+
+<hr />
+<h1 id="references">References</h1>
+
+<ul>
+  <li>Github: <a href="https://github.com/facebook/react">https://github.com/facebook/react</a></li>
+  <li>Getting started: <a href="https://reactjs.org/docs/getting-started.html">https://reactjs.org/docs/getting-started.html</a></li>
+  <li>Online playground: <a href="https://reactjs.org/docs/getting-started.html#online-playgrounds">https://reactjs.org/docs/getting-started.html#online-playgrounds</a></li>
+</ul>
+:ET
