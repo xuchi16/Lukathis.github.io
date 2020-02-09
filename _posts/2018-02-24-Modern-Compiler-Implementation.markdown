@@ -4,6 +4,7 @@ title:  "编译原理笔记"
 author: Xu Chi
 toc: true
 tags: [tech, compile]
+pinned: true
 date: 2018-02-24
 ---
 

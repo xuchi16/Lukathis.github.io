@@ -34,9 +34,9 @@ layout: default
             feather.replace()
           </script>
         </div>
-        <!-- <div class="entry"> -->
-          <!-- {{ post.excerpt | truncate: 200 }} -->
-        <!-- </div> -->
+        <div class="entry">
+          {{ post.excerpt }}
+        </div>
         <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
       </article>
     {% endif %}
