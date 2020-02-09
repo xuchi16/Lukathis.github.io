@@ -1,7 +1,17 @@
+---
+layout: post
+title:  "Markdown Quicktour"
+author: Xu Chi
+toc: true
+tags: [tech, markdown]
+date:   2016-05-15 11:00:00 +0800
+---
+
+关于Markdown语法的简单介绍和参考。
 
 # What is Markdown
 
->Markdown is a lightweight markup language with plain text formatting syntax. It is designed so that it can be converted to HTML and many other formats using a tool by the same name.[8] Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor. As the initial description of Markdown contained ambiguities and unanswered questions, many implementations and extensions of Markdown appeared over the years to answer these issues.
+> Markdown is a lightweight markup language with plain text formatting syntax. It is designed so that it can be converted to HTML and many other formats using a tool by the same name.[8] Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor. As the initial description of Markdown contained ambiguities and unanswered questions, many implementations and extensions of Markdown appeared over the years to answer these issues.
 -- From Wikipedia
 
 # 1. 区块元素

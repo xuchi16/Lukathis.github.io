@@ -1,7 +1,12 @@
 ---
 layout: post
 title:  "第一手知识和第二手知识"
+author: Xu Chi
+toc: true
+tags: [misc]
 ---
+
+关于学习内容的一点思考。
 
 # 一手知识和二手知识
 

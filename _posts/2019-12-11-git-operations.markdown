@@ -1,10 +1,19 @@
 ---
 layout: post
 title:  "Git Operations"
+author: Xu Chi
+toc: true
+tags: [tech, git]
 date:   2019-12-11 20:00:00 +0800
 ---
 
-## Split 1 commit into 2
+Cover some frequently used commands and complex scenario.
+
+# Git clear .gitignore cache
+
+      git rm -r --cached <filename or .>
+
+# Split 1 commit into 2
 
 Sometimes, we mistakely commit multiple files in one single commit while it actually did 2 things.
 In this case, if we only hope to cherry-pick part of them to another branch, we have to split this commit into 2.

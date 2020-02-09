@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "Digital Ocean部署Django"
+author: Xu Chi
+toc: true
+tags: [tech, python, Django, deployment]
+date: 2016-11-07
 ---
 
-
-
-# 【PREFACE】
-
-  暌违已久啦！学校最近项目太忙啦，终于腾出手继续做下去了！
+学习了一些Django的知识，做了一些开发工作之后尝试在VPS上进行部署。
 
 
 # 【关于Digital Ocean】

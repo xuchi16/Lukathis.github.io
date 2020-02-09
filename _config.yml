@@ -22,17 +22,17 @@ favicon: https://avatars1.githubusercontent.com/u/11461636?s=40&v=4
 navigation:
   - name: 文章
     url: /
-  - name: 关于
-    url: /about
   - name: 归档
     url: /archive
   - name: 标签
     url: /tags
+  - name: 关于
+    url: /about
 
 # Pagination
 paginate: 8
 
-excerpt_separator: <!-- more -->
+excerpt_separator: #
 
 # Includes an icon in the footer for each username you enter
 footer-links:

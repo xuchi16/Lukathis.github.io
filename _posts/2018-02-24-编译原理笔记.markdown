@@ -1,7 +1,13 @@
 ---
 layout: post
 title:  "编译原理笔记"
+author: Xu Chi
+toc: true
+tags: [tech, compile]
+date: 2018-02-24
 ---
+
+编译原理学习过程中的笔记和一些小思考。
 
 # 2. 第一单元： 编译器介绍
 

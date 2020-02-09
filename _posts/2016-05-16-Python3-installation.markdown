@@ -1,9 +1,13 @@
 ---
 layout: post
 title:  "Python2/3共存安装——使用pyenv"
+author: Xu Chi
+toc: true
+tags: [tech, python, env setup]
 date:   2016-05-30 11:22:34 +0800
 ---
-> 终归还是要学Python3
+
+无论关于pthon2和python3谁更优秀的争论结果为何，终归还是要学Python3
 
 ## pyenv
 

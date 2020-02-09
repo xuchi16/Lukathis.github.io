@@ -1,7 +1,12 @@
 ---
 layout: post
 title:  "又要统计？试着更进一步吧"
+author: Xu Chi
+toc: true
+tags: [tech, python]
 ---
+
+半自动化一部分统计工作之后还是想继续偷点懒，尝试着用轮子让速度更快一些。
 
 # 1. 半年一度开学季还在持续
 
