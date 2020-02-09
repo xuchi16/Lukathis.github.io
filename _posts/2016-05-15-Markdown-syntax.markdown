@@ -3,12 +3,13 @@ layout: post
 title:  "Markdown Quicktour"
 author: Xu Chi
 toc: true
-tags: [tech, markdown]
+tags: [Tech, Markdown]
 pinned: true
 date:   2016-05-15 11:00:00 +0800
 ---
 
-关于Markdown语法的简单介绍和参考。
+> We believe that writing is about content, about what you want to say – not about fancy formatting.
+> \-- Ulysses
 
 # What is Markdown
 
@@ -216,9 +217,3 @@ Markdown可以利用反斜杠来插入一些在语法中有其他意义的符号
 
 ## 推荐
 推荐一个很好用的在线markdown生成公众号文章的转换利器：http://md.aclickall.com
-
-> We believe that writing is about content, about what you want to say – not about fancy formatting.
->
-> 我们坚信写作写的是内容，所思所想，而不是花样格式。
->
-> — Ulysses for Mac

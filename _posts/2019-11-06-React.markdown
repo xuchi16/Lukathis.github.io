@@ -3,7 +3,7 @@ layout: post
 title:  "React"
 author: Xu Chi
 toc: true
-tags: [tech, JavaScript, React]
+tags: [Tech, JavaScript, React]
 date:   2019-11-06 17:00:00 +0800
 ---
 

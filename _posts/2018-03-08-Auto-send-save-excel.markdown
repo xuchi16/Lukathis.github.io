@@ -4,7 +4,7 @@ title:  "又要统计？试着更进一步吧"
 author: Xu Chi
 toc: true
 pinned: true
-tags: [tech, python]
+tags: [Tech, Python]
 ---
 
 半自动化一部分统计工作之后还是想继续偷点懒，尝试着用轮子让速度更快一些。

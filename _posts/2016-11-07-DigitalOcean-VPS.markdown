@@ -3,7 +3,7 @@ layout: post
 title:  "Digital Ocean部署Django"
 author: Xu Chi
 toc: true
-tags: [tech, python, Django, deployment]
+tags: [Tech, Python, Django, deployment]
 date: 2016-11-07
 ---
 

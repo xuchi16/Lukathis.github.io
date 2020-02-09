@@ -3,7 +3,7 @@ layout: post
 title:  "Spring学习笔记"
 author: Xu Chi
 toc: true
-tags: [tech, Java, Spring]
+tags: [Tech, Java, Spring]
 date: 2018-02-21
 ---
 

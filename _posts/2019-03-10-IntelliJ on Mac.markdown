@@ -3,7 +3,7 @@ layout: post
 title:  "IntelliJ on Mac"
 author: Xu Chi
 toc: true
-tags: [tech, env setup]
+tags: [Tech, env setup]
 ---
 
 How-to document to set up IntelliJ quickly on Mac OS.

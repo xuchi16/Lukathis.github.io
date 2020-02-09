@@ -3,7 +3,7 @@ layout: post
 title:  "Git Operations"
 author: Xu Chi
 toc: true
-tags: [tech, git]
+tags: [Tech, Git]
 date:   2019-12-11 20:00:00 +0800
 ---
 

@@ -4,7 +4,7 @@ title:  "统计太麻烦了，用python吧！"
 author: Xu Chi
 toc: true
 pinned: true
-tags: [tech, python]
+tags: [Tech, Python]
 ---
 
 如果回想起来应该是2015年9月的某个晚上桥梁馆101开完会之后就获得了一些每年必做的工作，人工做多了总想着自动化一些。
