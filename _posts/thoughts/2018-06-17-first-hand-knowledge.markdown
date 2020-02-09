@@ -3,7 +3,7 @@ layout: post
 title:  "第一手知识和第二手知识"
 author: Xu Chi
 toc: true
-tags: [Misc]
+tags: [Thoughts]
 ---
 
 关于学习内容的一点思考。
