@@ -1,6 +1,9 @@
+
+# Ignore Jekyll cache
 _site
 .sass-cache
 .jekyll-metadata
+ .jekyll-cache
 
 # Ignore folder
 .idea/
