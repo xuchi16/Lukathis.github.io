@@ -3,6 +3,7 @@ layout: post
 title:  "统计太麻烦了，用python吧！"
 author: Xu Chi
 toc: true
+pinned: true
 tags: [tech, python]
 ---
 

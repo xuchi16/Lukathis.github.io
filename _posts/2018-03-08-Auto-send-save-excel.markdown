@@ -3,6 +3,7 @@ layout: post
 title:  "又要统计？试着更进一步吧"
 author: Xu Chi
 toc: true
+pinned: true
 tags: [tech, python]
 ---
 
