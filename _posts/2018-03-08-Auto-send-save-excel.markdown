@@ -96,7 +96,8 @@ tags: [tech, python]
 这个过程类似于之前介绍的利用xlrd及xlwt库进行文件的读写操作，我们对之前的代码进行了一些改进，拆分出了ExcelReader和ExcelWriter两个类，包装了一些方法，以便调用。
 
 * ExcelReader 主要用来读取特定excel文件的内容。由于我们需要以列为单位读取数据，因此主要实现了读取一列及两列的方法。
-```
+
+```python
 import xlrd, os
 
 class ExcelReader:
@@ -131,7 +132,7 @@ class ExcelReader:
 在读取了每个人的学号和姓名后，我们需要拷贝模板文件，并修改其文件名及特定单元格。因此ExcelWriter需要传入想要生成的目标文件路径及名字作为参数。而进行拷贝或修改时则需要另外提供拷贝对象的路径及文件名或需要修改的单元格的值以及行列号。
 
 
-```
+```python
 from xlrd import open_workbook
 from xlutils.copy import copy
 
@@ -163,7 +164,7 @@ class ExcelWriter:
 * 生成文件
 完成上述工作后，只需要根据我们的工作流程生成需要的文件。我们将花名册命名为“2015master.xls”，读取3到90行的同学信息（第一列学号，第二列姓名），并存如num_name中，并生成对应的87份文件即可。
 
-```
+```python
 from ExcelReader import ExcelReader
 from ExcelWriter import ExcelWriter
 
@@ -209,7 +210,7 @@ if __name__ == "__main__":
 因此也只需要根据我们的要求对itchat提供的接口做简单包装即可。
 
 
-```
+```python
 import itchat
 
 class WeChatClient:
@@ -251,7 +252,7 @@ class WeChatClient:
 
 由于我们会在前一步先生成好文件，因此我们仍需要先读取所有人的信息，并根据姓名匹配微信中好友信息，获得好友的UserName项，将上一步生成的文件发送给对应同学，并等待回复。收到回复文件后回复消息，并将文件下载到./data文件夹下即可。
 
-```
+```python
 from ExcelReader import ExcelReader
 from WeChatClient import WeChatClient
 
