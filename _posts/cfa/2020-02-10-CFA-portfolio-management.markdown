@@ -6,7 +6,7 @@ toc: true
 tags: [Finance, CFA, Portfolio]
 ---
 
-使用Portfolio进行投资是一种有利于分散风险的投资方式。根据
+使用Portfolio进行投资是一种有利于分散风险的投资方式。
 
 # 我要投资
 
