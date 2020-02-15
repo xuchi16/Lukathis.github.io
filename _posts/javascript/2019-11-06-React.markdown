@@ -40,6 +40,12 @@ Different learning styles: theoretical/practical. Was always learning by concept
 -----------------------------------------------------
 # Questions and answers
 
+* What is React?
+A. React is a library for building user interfaces.
+
+* What is React component?
+> 一个组件的渲染函数就是一个基于 state 和 props 的纯函数，state 是自己的，props 是外面来的，任何东西变了就重新渲染一遍.
+
 * What's node and React Native mentioned in React's Readme: _"React can also render on the server using Node and power mobile apps using React Native._"
 
 * What does it mean _"Add React to a Website as a <script> tag in one minute"_
@@ -53,6 +59,9 @@ A. An XML-like syntax.
 A. The method componentDidMount() defines the interval as 1000 which is 1 second. And seems that this.interval is an internal field of React.Component.
 
 * What is react hook?
+
+* What is Babel?
+A. Babel is a JavaScript compiler. It is a toolchain that is mainly used to convert ECMAScript 2015+ code into backwards compatible version of JavaScript in current and older browsers or environments.
 
 -----------------------------------------------------
 # References
