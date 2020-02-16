@@ -4,7 +4,7 @@ title:  "如何在Jekyll中嵌入React"
 author: Xu Chi
 toc: true
 react: true
-categories: [Tech, JavaScript]
+categories: [tech, javascript]
 tags: [Tech, JavaScript, React]
 ---
 
