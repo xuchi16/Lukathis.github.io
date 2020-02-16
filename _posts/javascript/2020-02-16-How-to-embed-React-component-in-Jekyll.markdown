@@ -10,25 +10,27 @@ tags: [Tech, JavaScript, React]
 
 如果我在写React的博客的时候能够插入相应的实现效果岂不是更妙？
 
-# 1. 在文章中添加DOM容器
+# 1. 在博文模板中加载React 
+
+Jekyll的html文件是作为layout存在，并在layout中提取出可以重用的部分放在_include目录下。
+在本博客结构中，一般博客使用的post layout包含于default layout，而其中用head.html加载了脚本部分。
+因此，在head中使用如下代码加载React。
+
+此外，还可以使用Liquid判断语句`if page.react==true`根据文章的头文件的'react'标签决定是否需要加载该部分。
+如果进行了这个设置，不要忘了在文章开头的meta部分添加`react: true`来加载React。
+
+```html
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+```
+
+# 2. 在文章中添加DOM容器
 
 这里我们类似附录中的[教程][在网站中添加React]，希望加载一个Like按钮。
 Jekyll的博文都是用Markdown写的，也可以在其中插入HTML片段，因此我们可以简单地用这样的`<div>`标签添加想要的React组件位置。
 
 ```html
   <div id="like_button_container"></div>
-```
-
-# 2. 在博文模板中加载React 
-
-Jekyll的html文件是作为layout存在，并在layout中提取出可以重用的部分放在_include目录下。
-在本博客结构中，一般博客使用的post layout包含于default layout，而其中用head.html加载了脚本部分。
-因此，在head中使用如下代码加载React。
-此外，还可以使用Liquid判断语句`if page.react==true `根据文章的头文件的'react'标签决定是否需要加载该部分。
-
-```html
-  <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
 ```
 
 # 3. 定义React组件
