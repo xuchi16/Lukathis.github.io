@@ -3,6 +3,7 @@ layout: post
 title:  "[CFA] Portfolio Management"
 author: Xu Chi
 toc: true
+math: true
 tags: [Finance, CFA, Portfolio]
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  "Python2/3共存安装——使用pyenv"
 author: Xu Chi
 toc: true
-tags: [Tech, Python, env setup]
+tags: [Tech, Python, Setup]
 date:   2016-05-30 11:22:34 +0800
 ---
 

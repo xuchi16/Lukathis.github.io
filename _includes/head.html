@@ -16,7 +16,14 @@
   
   <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
 
+  {% if page.react==true %}
+  <!-- 注意: 部署时，将 "development.js" 替换为 "production.min.js"。-->
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+  {% endif %}
+
   <!-- 数学公式 -->
+  {% if page.math==true %} 
   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -26,5 +33,6 @@
       }
     });
   </script>
+  {% endif %} 
 
 </head>

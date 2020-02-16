@@ -63,6 +63,10 @@ Happy hacking!
 
 6. 然后在浏览器中访问 http://localhost:3000 即可
 
+# 设置Lint
+
+TBD
+
 # 关联Git
 
 TBD

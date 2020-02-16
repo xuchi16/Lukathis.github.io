@@ -9,34 +9,28 @@ date:   2019-11-06 17:00:00 +0800
 
 React learning roadmap and collection of useful materials.
 
-# Target and Schedule
-
-## Target
-
-Stage 1. Develop an app with two windows side by side. Left side show plain text or markdown text and right side be able to render markdown to HTML or other format.
-
-## Schedule
-* Go through tutorial and sample project
-* Conclude 
-* Develop Stage1
-
------------------------------------------------------
-# Try React
-## Online Playground
+# Try React with online Playground
 
 * Codepen: <https://codepen.io/pen/?&editable=true>
 * CodeSandbox: <https://codesandbox.io/s/new>
 
-## Learn React
+# Learn React
 Different learning styles: theoretical/practical. Was always learning by concepts, and this time planned to learn by doing and grab concepts when taking metro. Learning curve is another magic thing, different people have different opinion on this. When learning React, need to measure it.
 
 * HOME: <https://reactjs.org/tutorial/tutorial.html>
 * METRO: <https://reactjs.org/docs/hello-world.html>
 
------------------------------------------------------
-# Blog
+# Adoptin React
 
-### Day 1. Go through Git introduction
+1. React的使用很灵活，可以在静态网页中使用React作为其中的一部分，[文档](https://zh-hans.reactjs.org/docs/add-react-to-a-website.html)。
+2. 可以用一些流行的工具链：
+  * 如果你是在学习 React 或创建一个新的单页应用，请使用 Create React App
+  * 如果你是在用 Node.js 构建服务端渲染的网站，试试 Next.js
+  * 如果你是在构建面向内容的静态网站，试试 Gatsby
+  * 如果你是在打造组件库或将 React 集成到现有代码仓库，尝试更灵活的工具链
+
+如需要在Jekyll中使用React，可以尝试直接使用React。或者使用Gatsby来搭建这样的静态网站。
+
 -----------------------------------------------------
 # Questions and answers
 
@@ -45,6 +39,10 @@ A. React is a library for building user interfaces.
 
 * What is React component?
 > 一个组件的渲染函数就是一个基于 state 和 props 的纯函数，state 是自己的，props 是外面来的，任何东西变了就重新渲染一遍.
+
+* state vs. props?
+A. props和state都是普通的JavaScript对象，他们都是用来保存信息的，这些信息可以控制组件的渲染输出。
+ 他们的不同点就是：props是传递给组件的，而state是在组件内被组件自己管理的。
 
 * What's node and React Native mentioned in React's Readme: _"React can also render on the server using Node and power mobile apps using React Native._"
 
@@ -58,10 +56,14 @@ A. An XML-like syntax.
 * Cannot understand sample _"A Stateful Component"_ in reactjs.org, where it defined tick per sec?
 A. The method componentDidMount() defines the interval as 1000 which is 1 second. And seems that this.interval is an internal field of React.Component.
 
-* What is react hook?
-
 * What is Babel?
 A. Babel is a JavaScript compiler. It is a toolchain that is mainly used to convert ECMAScript 2015+ code into backwards compatible version of JavaScript in current and older browsers or environments.
+
+* What is Redux?
+A. [Redux](https://redux.js.org/) is a predictable state container for JS Apps. Develpers use Redux for state management.
+
+* What is React hook?
+A. [Hook](https://zh-hans.reactjs.org/docs/hooks-intro.html) 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
 
 -----------------------------------------------------
 # References
