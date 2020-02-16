@@ -72,7 +72,7 @@ h6 {
 
 p {
   color: $text-color;
-  margin: 1em 0;
+  margin: .2em 0;
 }
 
 a {
@@ -471,8 +471,8 @@ nav {
 }
 
 .posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $divider-color;
+  padding-bottom: 1em;
+  // border-bottom: 1px solid $divider-color;
 }
 
 .posts > .post:last-child {
