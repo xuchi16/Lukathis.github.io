@@ -96,12 +96,12 @@ permalink地址的定义方式有如下几种：
 ```yaml
 permalink: /:categories/:title/
 ```
-因此，我们js文件放置的目录应该对应于本篇博文对应的`category`层次结构，与本文的`url`结构也是一致的，这样Jekyll就能正确地找到js文件的位置。
+因此，我们js文件放置的目录应该对应于本篇博文对应的`category`层次结构，即定义在front matter中的`categories: [technology, javascript]`。这与本文的`url`结构也是一致的，这样Jekyll就能正确地找到js文件的位置。
 
 ```
 .
-├── Tech
-    └── JavaScript
+├── technology
+    └── javascript
         └── How-to-embed-React-component-in-Jekyll
             └── like_button.js
 ```
