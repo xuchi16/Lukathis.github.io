@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Java日志配置方式"
+author: Xu Chi
+toc: true
+tags: [Tech, Java]
+---
+
+Java的log需要如何记录？在Spring中应该如何配置？
+
+## What is logback/Sel4j
+
+* What is the .xml file for and how to use them? Who'll be responsible for loading the config xml file?

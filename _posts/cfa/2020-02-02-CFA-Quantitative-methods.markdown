@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[CFA] Reading 6. Time Value of Money"
+title:  "[CFA] Quantitative methods"
 author: Xu Chi
 toc: true
 tags: [Finance, CFA, Quantitative]

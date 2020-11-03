@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Tiger"
+author: Xu Chi
+toc: true
+tags: [Tech, Compile]
+---
+
+## 遇到的问题
+
+把源码下载下来后发现无法通过编译，主要原因是因为结构根据章节改变后无法正确找到对应类。

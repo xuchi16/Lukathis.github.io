@@ -6,7 +6,7 @@ toc: true
 tags: [Tech, 深入理解计算机系统]
 ---
 
-# 注意点
+CSAPP Lab 2. Bomb lab
 
 ### 系统环境
 

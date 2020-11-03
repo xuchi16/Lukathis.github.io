@@ -27,4 +27,14 @@ tags: [Tech, JavaScript, React]
 
 # 2. 一叠卡
 
+## 思路
 
+一叠卡是卡的集合，我们暂且让他平铺。
+
+## 效果
+
+<div>
+  <div id="flashcard-stack-container"></div>
+  <link rel="stylesheet" href="flashcard.css" type="text/css" />
+  <script src="flashcard.js"></script>
+</div>

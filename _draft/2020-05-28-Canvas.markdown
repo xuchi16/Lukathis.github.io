@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "HTML5 Canvas"
+author: Xu Chi
+toc: true
+tags: [Tech, JavaScript, Canvas]
+date:   2020-05-28 17:00:00 +0800
+---
+
+## Concepts
+
+* canvas元素
+* canvase绘图环境对象
+* save()与restor()方法
+* User Agent
+* 参阅Chrome Developer Tools文档学习控制台调试
+* 工具：性能分析器，时间轴工具，jsPerf
+* 贝塞尔曲线
+* 鼠标坐标：通过监听获得的鼠标坐标是窗口坐标，而不是相对于canvas自身的坐标。因此要进行坐标转换。
+* 为什么要“恢复绘制表面”？

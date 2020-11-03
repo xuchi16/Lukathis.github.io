@@ -4,7 +4,6 @@ title:  "Markdown Quicktour"
 author: Xu Chi
 toc: true
 tags: [Tech, Markdown]
-pinned: true
 date:   2016-05-15 11:00:00 +0800
 ---
 
