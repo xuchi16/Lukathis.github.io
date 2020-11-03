@@ -15,4 +15,4 @@ tags: [Tech, Algo]
 
 # 回到目录
 
-[算法目录]({% post_url 2020-11-03-Algo-Content %})
+[算法目录]({% post_url /algo/2020-11-03-Algo-Content %})
