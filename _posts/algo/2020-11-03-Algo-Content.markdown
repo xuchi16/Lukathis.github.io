@@ -23,13 +23,13 @@ tags: [Tech, Algo, Summary]
 
 [哈希表]
 
-[二叉树]
+[二叉树]({% post_url /algo/2020-11-04-Binary-Tree %})
 
 [二叉搜索树]
 
 [前缀树]
 
-[链表]({% post_url /algo/2020-11-03-Linked-list %})
+[链表]({% post_url /algo/2020-11-03-Linked-List %})
 
 [图]
 
@@ -37,7 +37,7 @@ tags: [Tech, Algo, Summary]
 
 [排序]({% post_url /algo/2020-11-03-Sorting %})
 
-[二分查找]({% post_url /algo/2020-05-09-Binary-Search %})
+[二分查找]({% post_url /algo/2020-11-03-Binary-Search %})
 
 [双指针]
 
@@ -49,11 +49,11 @@ tags: [Tech, Algo, Summary]
 
 [回溯]
 
-[分治]
+[分治]({% post_url /algo/2020-11-03-Divide-And-Conquer %})
 
 [贪心]
 
-[动态规划]
+[动态规划]({% post_url /algo/2020-11-03-Dynamic-Programming %})
 
 [背包]
 
@@ -64,5 +64,7 @@ tags: [Tech, Algo, Summary]
 [位运算]
 
 [公共子序列]
+
+[约瑟夫环]
 
 [NP]
