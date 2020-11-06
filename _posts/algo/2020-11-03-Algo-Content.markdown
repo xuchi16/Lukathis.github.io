@@ -29,7 +29,7 @@ tags: [Tech, Algo, Summary]
 
 [前缀树]
 
-[链表]({% post_url /algo/2020-11-03-Linked-List %})
+[链表]({% post_url /algo/2020-11-06-Linked-List %})
 
 [图]
 
