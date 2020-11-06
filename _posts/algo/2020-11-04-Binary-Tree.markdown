@@ -97,6 +97,20 @@ class Solution {
 
 递归实现本质上是隐式地使用了函数的栈，而如果使用迭代则可以自己维护一套栈来存储中间结果。
 
+主要的难点是如何维护这个栈。
+我们观察如下的三个迭代实现，在迭代过程中，如果当前节点不为空，或者栈中尚存未处理的节点，则需要不断循环。
+在每次循环中，总是需要不断地先把当前节点推进栈中进行暂存，然后把腾出来的当前指针指向左节点，从而达到不断向左推进但是仍旧记录下遍历下来的路径。
+* 对于先序遍历来说，在把当前节点指针传递给左节点之前，需要在结果中添加当前根节点的值
+* 对于中序遍历来说，因为向栈中推进节点的顺序符合先根节点后左节点的原则，因此只需要每次弹出时向结果集添加该节点的值即可。添加完毕后把当前节点的指针传递给右子树即可。
+* 对于后序遍历来说，情形相对复杂，解释如下
+
+对于先序和中序来说，因为根不在最后一个，因此退出当前循环的时候，只需要把当前右子树的节点推进栈中即可。
+对于后序遍历来说，需要先处理两棵子树。因此每次大循环开始时和先序、中序类似，先不断地向左进行循环，找到需要最先处理的左子树。
+此后，从栈中拿到当前需要处理的节点时，
+* 如果该节点右子树为空或*已经被处理*过，则此时可以将当前节点数值添加进结果集。判断为空很简单，而判断*已经被处理*则需要额外维护一个指针`prev`来记录上一次被处理的节点。因为后序是*左右根*，如果当前节点有右子树且被处理过，则其必是前一次处理的节点。
+* 如果该节点右子树不为空或者没有被处理过，那么则简单地把当前节点推进栈中，并且把当前节点的指针指向右节点
+
+
 ```java
 // preorder
 class Solution {
@@ -104,7 +118,6 @@ class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         Deque<TreeNode> stack = new LinkedList<>();
-
         TreeNode node = root;
         while(node != null || !stack.isEmpty()) {
             while (node != null) {
@@ -125,7 +138,6 @@ class Solution {
         List<Integer> result = new ArrayList<>();
         Deque<TreeNode> stack = new LinkedList<>();
         TreeNode node = root;
-
         while (node != null || !stack.isEmpty()) {
             while (node != null) {
                 stack.push(node);
@@ -147,7 +159,6 @@ class Solution {
         Deque<TreeNode> stack = new LinkedList<>();
         TreeNode node = root;
         TreeNode prev = null;
-
         while (node != null || !stack.isEmpty()) {
             while (node != null) {
                 stack.push(node);
