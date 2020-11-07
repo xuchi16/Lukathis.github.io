@@ -1,0 +1,106 @@
+---
+layout: post
+title:  "MathJax Cheatsheet"
+author: Xu Chi
+toc: true
+tags: [Tech, Markdown, MathJax]
+---
+
+Formula is more expressive than natrual language for abstract concepts.
+
+# MathJax
+
+MathJax is a JavaScript display engine for mathematics that works in all browsers.
+No more setup for readers. It just works.
+
+# Basics
+
+When inserting formulat
+
+For inline formulas, enclose the formula in $...$. For displayed formulas, use $$...$$.
+
+
+# Cheat sheet
+
+### Absolute
+
+The absolute value of some expression can be denoted as \lvert x\rvert or, more generally, as \left\lvert … \right\rvert. It renders as |x|.
+
+```
+\lvert x \rvert
+\left\lVert x \right\rVert
+```
+
+$$
+\lvert x \rvert
+\left\lVert x \right\rVert
+$$
+
+### Fraction
+
+nomral fraction
+
+```
+\frac{(1+n)}{n}
+```
+
+$$
+\frac{(n+1)}{n}
+$$
+
+### Greek letters
+
+```
+\alpha, \beta, …, \omega
+
+# For uppercase
+\Gamma, \Delta, …, \Omega
+```
+
+$$
+\alpha, \beta, …, \omega
+\\
+\Gamma, \Delta, …, \Omega
+$$
+
+
+### Mean
+
+```
+\overline A
+```
+
+$$
+\overline A
+$$
+
+### Sum
+
+```
+\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
+```
+
+$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
+
+### Superscripts and subscripts
+
+For superscripts and subscripts, use ^ and _
+
+```
+x_i^2, \log_2
+```
+
+$$
+x_i^2
+\\
+\log_2
+$$
+
+
+---
+
+# Links
+
+[MathJax Website](https://www.mathjax.org/)
+
+[MathJax tutorial](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)

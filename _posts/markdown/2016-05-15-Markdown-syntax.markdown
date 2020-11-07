@@ -216,3 +216,5 @@ Markdown可以利用反斜杠来插入一些在语法中有其他意义的符号
 
 ## 推荐
 推荐一个很好用的在线markdown生成公众号文章的转换利器：http://md.aclickall.com
+
+VS Code MathJax Plugin: Markdown+Math
