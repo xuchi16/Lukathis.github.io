@@ -16,7 +16,18 @@ No more setup for readers. It just works.
 
 # Basics
 
-When inserting formulat
+When inserting formulas, add `math: true` into the meta configuration for the posts first, e.g.
+```
+---
+layout: post
+title:  "MathJax Cheatsheet"
+author: Xu Chi
+toc: true
+math: true
+tags: [Tech, Markdown, MathJax]
+---
+```
+
 
 For inline formulas, enclose the formula in $...$. For displayed formulas, use $$...$$.
 
