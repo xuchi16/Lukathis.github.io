@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "MathJax Cheatsheet"
+title:  "MathJax Cheat Sheet"
 author: Xu Chi
 toc: true
 math: true
@@ -94,6 +94,14 @@ $$
 
 $$
 
+### Spaces and break line
+
+```
+space: \
+break line: \\
+```
+
+
 ### Sum
 
 ```
@@ -123,6 +131,17 @@ x_i^2
 $$
 
 
+### Symbols and notations
+
+```
+\lt \gt \le \leq \leqq \leqslant \ge \geq \geqq \geqslant \neq <>≤≤≦⩽≥≥≧⩾≠
+```
+
+$$
+
+\lt \gt \le \leq \leqq \leqslant \ge \geq \geqq \geqslant \neq <>≤≤≦⩽≥≥≧⩾≠
+
+$$
 ---
 
 # Links

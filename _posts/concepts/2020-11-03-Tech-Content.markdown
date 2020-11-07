@@ -105,6 +105,8 @@ tags: [Tech, Summary]
 
 ## 机器学习
 
+[线性回归]({% post_url /ml/2020-11-07-Linear-Regression %})
+
 ## 测试
 
 [白盒黑盒]

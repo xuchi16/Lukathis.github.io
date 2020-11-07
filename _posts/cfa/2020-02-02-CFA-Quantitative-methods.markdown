@@ -44,11 +44,54 @@ Stated annual rate
 
 # Statistical concepts 统计
 
-## 基本统计词汇
+## 基本统计量
 
-medium, mode
+四个维度
+* Mean 平均数
+* Variance 方差
+* Skewness 偏度
+* Kurtosis 峰度
 
-当样本总量为偶数时，如何取medium
+## 统计学分类
+
+统计学分为Descriptive statistics和Inferential statistics。
+
+### Poulation vs. Sample
+
+| Name | Definition | Name of feature |
+| :--- | :--- | :--- |
+| Population | defined as all members of a specific group | Parameter: describe the features of a population |
+| Sampe | subset of a population | Statistic: describes the features of a sample | 
+
+### Measurement scales
+
+| Scale name | Definition | Sample |
+| :--- | :--- | :--- |
+| Nominal | 离散 | 男女 |
+| Ordinal | 顺序 | 排名 |
+| Interval | 间隔 | 温度 |
+| Ratio | 比例 | 钱 |
+
+## 数据特征
+* Medium 中位数，注意的是如果总量是偶数个，则取中间两个值除以二
+* Mode 众数
+* Mean 平均数
+
+### 平均数
+平均数包含以下几种
+* 算术平均(The Arithmetic Mean)
+* 加权平均(The Weighted Mean)
+* 几何平均(The Geometric Mean)：适用于复利的计算
+* 调和平均(The Harmonic Mean)：又称为倒数平均数。适用于如购买了总价相同的若干支股票，求平均价格。
+
+需要注意的是有如下结论：*调和平均<集合平均<算术平均*
+
+## 频率分布
+
+* Absolute frequency
+* Relative frequency
+* Cumulative absolutee frequency
+* Cumulative relative frequency
 
 ## Quantile 分位数
 
@@ -63,7 +106,19 @@ medium, mode
 * deciles 十分位数
 * percentile 百分位数
 
+
+
 # 离散程度衡量
+
+## 记号
+在计算总体指标时，采取的记号亦不同
+
+|       |  样本  |  总体 |
+| :---: | :---: | :---: |
+| 均值 | $\overline X$| $\mu$ |
+| 方差 | $S^2$ | $\sigma^2$ |
+| 标准差 | $S$ | $\sigma$ |
+| 总量 | $n$ | $N$ |
 
 ## Mean Absolute Deviation 平均绝对偏差
 
@@ -74,3 +129,65 @@ $$
 MAD = \frac{\sum_{i=0}^n \lvert X_i - \overline X \rvert}{n}
 
 $$
+
+## 方差及标准差
+
+方差一般称为variance。
+标准差一般称为standard deviation。
+
+### 样本方差及总体方差
+
+$$
+
+样本方差\     
+s^2=\frac{\sum_{i=1}^n (X_i - \overline X)^2 }{ n-1 }
+
+\\
+
+总体方差\ 
+\sigma^2=\frac{\sum_{i=0}^{N} (X_i - \mu)^2}{N}
+
+$$
+
+注意为什么样本方差的分母是`(n-1)`，原因在于其实在求均值的时候已经用了`n`个数的平均值来做估计。因此在求方差的时候，只有`(n-1)`个数和均值信息是不相关的。所以在计算方差的时候使用`(n-1)`。
+
+### 半方差(Semivariance)和目标半方差(Target Semivariance)
+
+半方差只计算低于平均值的部分，如用来估计风险损失部分。
+
+目标半方差是自定义一个benchmark并据此计算低于其值部分的方差。
+
+$$
+
+Semivariance = \frac{\sum_{for \ all \ X_i \leqslant \overline X}^{N} (X_i - \mu)^2}{N}
+\\
+Target\ Semivariance = \frac{\sum_{for \ all \ X_i \leqslant B}^{N} (X_i - B)^2}{N} 
+\\
+(B: customized\ benchmark)
+
+$$
+
+### 金融计算器计算方差
+
+遵循以下流程
+
+```
+1 -> DATA (2ND + 7)
+2 -> CLR WORK (2ND + CE|C)
+3 -> X01: number1 + ENTER + Down arrow
+4 -> Y01: Down arrow
+5 -> REPEAT 3->4
+6 -> STAT (2ND + 8)
+7 -> Switch mode with (2ND + 8)
+8 -> Check result with Down arrow
+```
+
+| 模式 | 意义 |
+| --- | --- |
+| 1-V | 计算一组数据的统计量，此时Y01,Y02等作为频数使用 |
+| LIN | 计算两组数据标准差，此时Y01,Y02等作为第二组数据，LIN表示线性回归 |
+| Ln | 计算两组数据标准差，此时Y01,Y02等作为第二组数据，Ln表示指数回归 |
+| EXP | 计算两组数据标准差，此时Y01,Y02等作为第二组数据，EXP表示乘方回归 |
+
+注: [线性回归]({% post_url /ml/2020-11-07-Linear-Regression %})
+
