@@ -3,6 +3,7 @@ layout: post
 title:  "MathJax Cheatsheet"
 author: Xu Chi
 toc: true
+math: true
 tags: [Tech, Markdown, MathJax]
 ---
 

@@ -3,6 +3,7 @@ layout: post
 title:  "[CFA] Quantitative methods"
 author: Xu Chi
 toc: true
+math: true
 tags: [Finance, CFA, Quantitative]
 ---
 
