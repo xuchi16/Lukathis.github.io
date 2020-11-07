@@ -29,7 +29,7 @@ tags: [Tech, Markdown, MathJax]
 ```
 
 
-For inline formulas, enclose the formula in $...$. For displayed formulas, use $$...$$.
+For inline formulas, enclose the formula in `$...$`. For displayed formulas, use `$$...$$`.
 
 
 # Cheat sheet
