@@ -44,8 +44,10 @@ The absolute value of some expression can be denoted as \lvert x\rvert or, more 
 ```
 
 $$
+
 \lvert x \rvert
 \left\lVert x \right\rVert
+
 $$
 
 ### Fraction
@@ -57,7 +59,9 @@ nomral fraction
 ```
 
 $$
+
 \frac{(n+1)}{n}
+
 $$
 
 ### Greek letters
@@ -70,9 +74,11 @@ $$
 ```
 
 $$
+
 \alpha, \beta, …, \omega
 \\
 \Gamma, \Delta, …, \Omega
+
 $$
 
 
@@ -83,7 +89,9 @@ $$
 ```
 
 $$
+
 \overline A
+
 $$
 
 ### Sum
@@ -92,7 +100,11 @@ $$
 \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
 ```
 
-$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
+$$
+
+\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
+
+$$
 
 ### Superscripts and subscripts
 
@@ -103,9 +115,11 @@ x_i^2, \log_2
 ```
 
 $$
+
 x_i^2
 \\
 \log_2
+
 $$
 
 
