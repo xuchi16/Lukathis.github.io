@@ -69,5 +69,7 @@ medium, mode
 这个值可以从名字里直接推断出来其计算方式
 
 $$
+
 MAD = \frac{\sum_{i=0}^n \lvert X_i - \overline X \rvert}{n}
+
 $$
