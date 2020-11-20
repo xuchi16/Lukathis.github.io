@@ -132,8 +132,7 @@ $$
 
 ## 方差及标准差
 
-方差一般称为variance。
-标准差一般称为standard deviation。
+方差一般称为variance。标准差一般称为standard deviation。
 
 ### 样本方差及总体方差
 

@@ -358,10 +358,66 @@ class Solution {
 >       15   7
 
 
-这是一道很典型的题目。
+思路：这是一道很典型的题目。
 如果我们徒手来复原该树的话，我们可以观察到，在后序遍历中，根永远在最后一个。
 取得此根后，可以在中序遍历中，将该树的左右子树分开。
 对于左右两棵子树，仍然采用上述方法确定子树的根节点，递归地解决该问题。
+
+直接解如下，在数量较大时表现较差。需要做一定的优化。
+```java
+class Solution {
+    public TreeNode buildTree(int[] inorder, int[] postorder) {
+
+        if (inorder.length == 0) {
+            return null;
+        }
+
+        int currentVal = postorder[postorder.length - 1];
+        TreeNode currentNode = new TreeNode(currentVal);
+
+        if (inorder.length == 1) {
+            return currentNode;
+        }
+   
+        int currentInorderIdx = findIdx(inorder, currentVal);
+
+        int[] leftInorder = Arrays.copyOfRange(inorder, 0, currentInorderIdx);
+        int[] rightInorder = Arrays.copyOfRange(inorder, currentInorderIdx + 1, inorder.length);
+
+        int[] leftPostorder = constructPostorder(leftInorder, postorder);
+        int[] rightPostorder = constructPostorder(rightInorder, postorder);
+
+        TreeNode leftNode = buildTree(leftInorder, leftPostorder);
+        TreeNode rightNode = buildTree(rightInorder, rightPostorder);
+
+        currentNode.left = leftNode;
+        currentNode.right = rightNode;
+
+        return currentNode;
+    }
+
+    private int findIdx(int[] array, int target) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == target) return i;
+        }
+        return -1;
+    }
+
+    private int[] constructPostorder(int[] inorder, int[] postorder) {
+        List<Integer> result = new ArrayList<>();
+        
+        for (int v : postorder) {
+            if (Arrays.stream(inorder).anyMatch(i -> i == v)) {
+                result.add(v);
+            }
+        }
+
+        return result.stream().mapToInt(i->i).toArray();
+    }
+
+}
+```
+
 
 
 # LeetCode题目

@@ -29,4 +29,4 @@ CFA内容汇总，主要概念汇总。
 
 9. Alternative investments
 
-10. Portfolio management
+10. [Portfolio management]({% post_url /cfa/2020-11-10-CFA-Portfolio-Management %})

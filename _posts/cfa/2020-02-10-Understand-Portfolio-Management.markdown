@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[CFA] Portfolio Management"
+title:  "Understand Portfolio Management"
 author: Xu Chi
 toc: true
 math: true

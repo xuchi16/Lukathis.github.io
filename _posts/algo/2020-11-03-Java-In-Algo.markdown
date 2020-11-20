@@ -11,6 +11,19 @@ tags: [Tech, Algo, Java]
 
 # Collections
 
+
+## List
+
+List to array
+
+```java
+// int
+list.stream().mapToInt(i->i).toArray();
+
+// string
+list.toArray(new String[0]);
+```
+
 ## Stack
 
 一般我们用Deque接口定义stack，可以选择LinkedList作为具体实现类。
@@ -32,3 +45,24 @@ queue.poll(element);
 ```
 
 # Sorting
+
+# Array
+
+## Sub-array
+
+可以用以下函数取得sub-array，注意to位置的元素不包括在内。[JavaDoc Arrays](http://docs.oracle.com/javase/6/docs/api/java/util/Arrays.html)
+
+```
+Arrays.copyOfRange(Object[] src, int from, int to)
+```
+
+## Contains
+
+```
+Arrays.asList(yourArray).contains(yourValue)
+
+or
+
+String[] values = {"AB","BC","CD","AE"};
+boolean contains = Arrays.stream(values).anyMatch("s"::equals);
+```
