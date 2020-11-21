@@ -191,9 +191,13 @@ public class Solution {
 $$
 
 slow = a + b
+
 \\
+
 fast = a + b + c
+
 \\
+
 fast = 2 * slow
 
 $$
