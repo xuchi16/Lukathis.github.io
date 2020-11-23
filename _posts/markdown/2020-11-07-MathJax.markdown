@@ -28,15 +28,14 @@ tags: [Tech, Markdown, MathJax]
 ---
 ```
 
-
-For inline formulas, enclose the formula in `$...$`. For displayed formulas, use `$$...$$`.
+For inline formulas, enclose the formula in pair of `$`. For displayed formulas, use `$$`.
 
 
 # Cheat sheet
 
 ### Absolute
 
-The absolute value of some expression can be denoted as \lvert x\rvert or, more generally, as \left\lvert … \right\rvert. It renders as |x|.
+The absolute value of some expression can be denoted as `\lvert x\rvert` or, more generally, as `\left\lvert … \right\rvert`. It renders as `|x|`.
 
 ```
 \lvert x \rvert
@@ -46,13 +45,14 @@ The absolute value of some expression can be denoted as \lvert x\rvert or, more 
 $$
 
 \lvert x \rvert
+\\
 \left\lVert x \right\rVert
 
 $$
 
 ### Fraction
 
-nomral fraction
+Nomral fraction
 
 ```
 \frac{(1+n)}{n}
@@ -67,6 +67,7 @@ $$
 ### Greek letters
 
 ```
+# Greek letters
 \alpha, \beta, …, \omega
 
 # For uppercase
@@ -134,14 +135,21 @@ $$
 ### Symbols and notations
 
 ```
-\lt \gt \le \leq \leqq \leqslant \ge \geq \geqq \geqslant \neq <>≤≤≦⩽≥≥≧⩾≠
+\lt \gt \le \leq \leqq \leqslant \ge \geq \geqq \geqslant \neq 
+or
+<>≤≤≦⩽≥≥≧⩾≠
 ```
 
 $$
 
-\lt \gt \le \leq \leqq \leqslant \ge \geq \geqq \geqslant \neq <>≤≤≦⩽≥≥≧⩾≠
+\lt \gt \le \leq \leqq \leqslant \ge \geq \geqq \geqslant \neq
+\\
+or
+\\
+<>≤≤≦⩽≥≥≧⩾≠
 
 $$
+
 ---
 
 # Links
