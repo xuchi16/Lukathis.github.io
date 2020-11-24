@@ -46,19 +46,32 @@ queue.poll(element);
 
 # Sorting
 
+我们可以使用`Arrays.sort()`进行排序。
+
+方法1是我们常用的排序写法，但是存在一个致命的问题就是可能会溢出。
+因此用方法2的写法才是正确的写法。
+
+```java
+// 方法1. 注意这里的减法可能会导致溢出
+Arrays.sort(nums, (n1, n2) -> (n1[0] - n2[0]));
+
+// 方法2. 正确的比较方法
+Arrays.sort(points, (n1, n2) -> (n1[0] < n2[0] ? -1 : 1));
+```
+
 # Array
 
 ## Sub-array
 
 可以用以下函数取得sub-array，注意to位置的元素不包括在内。[JavaDoc Arrays](http://docs.oracle.com/javase/6/docs/api/java/util/Arrays.html)
 
-```
+```java
 Arrays.copyOfRange(Object[] src, int from, int to)
 ```
 
 ## Contains
 
-```
+```java
 Arrays.asList(yourArray).contains(yourValue)
 
 or
