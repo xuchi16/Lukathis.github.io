@@ -53,7 +53,7 @@ tags: [Tech, Algo, Summary]
 
 [二分查找]({% post_url /algo/2020-11-03-Binary-Search %})
 
-[背包]
+[背包]({% post_url /algo/2020-11-24-Knapsack-Problem %})
 
 [滑动窗口]
 
@@ -287,7 +287,11 @@ tags: [Tech, Algo, Summary]
 
 | No. | Name | Difficulty | Similar Problems | Comments |
 | --- | ---- | ---------- | ---------------- | -------- |
-| 416 | 分割等和子集 | M | | TODO |
+| 416 | 分割等和子集 | M | | DP |
+| 474 | 一和零 | M | | DP |
+| 1049 | 最后一块石头的重量 II | M | | DP |
+| 518 | 零钱兑换 II | M | | DP | 
+| 377 | 组合总和 IV | M | | DP | 
 
 ---
 
