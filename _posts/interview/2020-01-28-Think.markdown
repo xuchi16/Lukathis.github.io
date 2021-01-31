@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "数据结构"
+author: Xu Chi
+toc: true
+tags: [Tech, Java]
+---
+
+
+
+# 栈
+
+
+
+栈是一种具有先进后出性质的数据结构。
+
+
+
+单调栈。
+
+
+
+# 堆
+

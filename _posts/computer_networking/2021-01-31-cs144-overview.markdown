@@ -1,0 +1,52 @@
+---
+layout: post
+title:  "CS144 - Overview"
+author: Xu Chi
+toc: true
+tags: [Tech, Networking, CS144]
+pinned: true
+---
+
+The overview and scheduler for CS144.
+
+# Lab Scheduler
+
+| Lab | DDL | Status |
+| --- | --- | --- |
+| Lab 0. networking warmup | 2021-01-31 | In progress |
+| Lab 1. stitching substrings into a byte stream | 2021-02-07 | Not started |
+| Lab 2. the TCP receiver | 2021-02-14 | Not started |
+| Lab 3. the TCP sender | 2021-02-21 | Not started |
+| Lab 4. the TCP connection | 2021-02-28 | Not started |
+| Lab 5. the network interface | 2021-03-07 | Not started |
+| Lab 6. the IP router | 2021-03-14 | Not started |
+| Lab 7. putting it all together | 2021-03-21 | Not started | 
+
+# Wireshark lab
+
+| Lab | DDL | Status |
+| --- | --- | --- |
+| Lab 0. Getting started| 2021-01-31 | Done in 2021-01-30 |
+| Lab 1. HTTP | 2021-02-07 | In progress |
+| Lab 2. DNS | 2021-02-14 | Not started |
+| Lab 3. TCP | 2021-02-21 | Not started |
+| Lab 4. UDP | 2021-02-28 | Not started |
+| Lab 5. IP | 2021-03-07 | Not started |
+| Lab 6. NAT | 2021-03-14 | Not started |
+| Lab 7. ICMP | 2021-03-21 | Not started | 
+| Lab 8. Ethernet and ARP | 2021-03-28 | Not started |
+| Lab 9. DHCP | 2021-04-04 | Not started |
+| Lab 10. 802.11 Wifi | 2021-04-11 | Not started |
+| Lab 11. SSL | 2021-04-18 | Not started |
+
+# Useful links
+
+[CS144](https://cs144.github.io/)
+
+[Course on Bilibili](https://www.bilibili.com/video/BV1wt41167iN?from=search&seid=12807244912122184980)
+
+[HIT couse on Bilibili](https://www.bilibili.com/video/BV1Up411Z7hC?p=1)
+
+[huangrt01](https://github.com/huangrt01/CS-Notes/blob/master/Notes/Output/Computer-Networking-Lecture-CS144-Stanford.md)
+
+[Wireshark lab](https://gaia.cs.umass.edu/kurose_ross/wireshark.htm)

@@ -34,6 +34,10 @@ stack.push(element);
 stack.pop();
 ```
 
+```java
+Stack<Integer> s = new Stack<>()
+```
+
 ## Queue
 
 可以使用Queue接口定义quque，并选择LinkedList作为具体实现类。
@@ -78,4 +82,22 @@ or
 
 String[] values = {"AB","BC","CD","AE"};
 boolean contains = Arrays.stream(values).anyMatch("s"::equals);
+```
+
+## Fill
+
+Fill an initialized array with `val`.
+
+```java
+int[] dp = new int[100];
+Arrays.fill(dp, val);
+```
+
+## String join
+
+```java
+List<String> strings = new LinkedList<>();
+strings.add("Java");strings.add("is");
+strings.add("cool");
+String message = String.join(" ", strings);ri
 ```

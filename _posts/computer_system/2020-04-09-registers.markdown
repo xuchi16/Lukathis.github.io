@@ -25,5 +25,6 @@ CSAPP: Register summarize
 
 ### Registers with special functionality
 
+* return value: %rax
 * stack pointer: %rsp
 * instruction pointer: %rip
