@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "CS144 - Overview"
+title:  "[CS144] Overview"
 author: Xu Chi
 toc: true
 tags: [Tech, Networking, CS144]

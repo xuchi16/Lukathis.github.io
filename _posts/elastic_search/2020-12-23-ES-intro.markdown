@@ -6,6 +6,8 @@ toc: true
 tags: [Tech, Elasticsearch]
 ---
 
+Elasticsearch提供了一种在非结构化数据中进行分析的有力工具。
+
 # Getting started
 
 ## Basic concepts
