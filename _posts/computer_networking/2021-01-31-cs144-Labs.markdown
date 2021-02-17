@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "[CS144] Labs"
+author: Xu Chi
+toc: true
+tags: [Tech, Networking, CS144]
+---
+
+CS144 Lab writeups.
+
+# Lab 0. Networking warmup
+
+Lab 0主要是三个主要任务：
+* 环境配置
+* 简单Http Client的C++实现
+* 字节流的C++实现
+
+# Lab 1. stitching substrings into a byte stream
+
+## Track:
+* 实验指导：20分钟
+
+# C++ environment setup

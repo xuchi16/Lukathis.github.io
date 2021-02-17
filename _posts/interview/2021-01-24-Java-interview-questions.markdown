@@ -4,60 +4,58 @@ title:  "Interview- Java"
 author: Xu Chi
 toc: true
 tags: [Tech, Java, Spring]
-date: 2018-02-21
 ---
 
 整理一些常见的Java面试题。
 
 
-
 一、Java 基础
 
-1.JDK 和 JRE 有什么区别？
+---
 
-JDK是development kit而JRE是运行时的环境。JDK包含了JRE以及编译器javac、java的调试及分析工具等。如果需要运行Java程序只需要JRE，而如果需要开发则需要JDK。
+### JDK 和 JRE 有什么区别？
+
+  JDK是development kit而JRE是运行时的环境。JDK包含了JRE以及编译器javac、java的调试及分析工具等。如果需要运行Java程序只需要JRE，而如果需要开发则需要JDK。
+
+---
+
+### == 和 equals 的区别是什么？
+
+  在object中，==表示是引用的是完全同一个对象，而equals表示两者逻辑上等价，可以通过覆盖equals方法定义如何判断值相等。
+
+---
+
+### 两个对象的 hashCode()相同，则 equals()也一定为 true，对吗？
+
+  不一定。但反之一定。这里的关键在于理解hashCode()方法的目的。
+
+### final 在 java 中有什么作用？
+
+  如果用来修饰成员变量，类同常量，不可改变
+  如果用来修饰类，表示不可以被继承
+  如果用来修饰方法，则该方法无法被重载(override)
 
 
+## String相关概念及问题
 
-2.== 和 equals 的区别是什么？
-
-在object中，==表示是完全同一个对象，而equals表示两者逻辑上等价。
-
-
-
-3.两个对象的 hashCode()相同，则 equals()也一定为 true，对吗？
-
-不一定。但反之一定。
-
-- 4.final 在 java 中有什么作用？
-
-  final如果用来修饰成员变量，类同常量，不可改变
-
-  如果有用来修饰方法或者类，表示不可以被继承
-
-- 5.java 中的 Math.round(-1.5) 等于多少？
-
-  -2
-
-- 6.String 属于基础的数据类型吗？
+### String 属于基础的数据类型吗？
 
   不属于，是对象类型。
 
-- 7.java 中操作字符串都有哪些类？它们之间有什么区别？
+### String类常用的方法有哪些
 
+length(),  indexOf(), trim(), split(), toLowerCase(), toUpperCase(), subString()
+ 
+7.java 中操作字符串都有哪些类？它们之间有什么区别？
+
+  String声明了不可变变量，而StringBuilder和StringBuffer都是在原有对象基础上进行操作。
   StringBuilder和StringBuffer，StringBuffer线程安全。（为什么）
+  
 
-- 8.String str="i"与 String str=new String("i")一样吗？
+8.String str="i"与 String str=new String("i")一样吗？
 
-  不一样，前者会在堆中找到相同的字符串，而后者一定会新建一个对象。
+  不一样，前者会在常量池中分配一个变量，而后者会在堆中新建一个对象。
 
-- 9.如何将字符串反转？
-
-  StringUtils.reverse()?
-
-- 10.String 类的常用方法都有那些？
-
-  equals, substring, length, charAt
 
 - 11.抽象类必须要有抽象方法吗？
 
