@@ -14,26 +14,111 @@ Java常见面试题整理。
 
 ## 数据类型
 
-int长度，平台相关吗
-什么是拆箱/装箱
+
+### int长度，平台相关吗
+32位。无论机器是32位还是64位，Java运行在JVM上，而虚拟机规定int长度为32位。
+
+
+### 什么是拆箱/装箱
+
+- 装箱：自动将基本数据类型转换为包装类，可以用`Integer.valueOf(int)`
+  
+- 拆箱：将包装类转换为基本类型，可以用`Integer.intVal(Integer)`
+  
+自动装拆箱其实是语法糖，`Intger a = 3`在编译后会变成`Integer a = Integer.valueOf(3)`，而在`valueOf()`方法中会有缓存的逻辑，`-128~127`之间的数不会重复创建新的对象，参照如下源代码：
+
+```java
+public static Integer valueOf(int i) {
+    if (i >= IntegerCache.low && i <= IntegerCache.high)
+        return IntegerCache.cache[i + (-IntegerCache.low)];
+    return new Integer(i);
+}
+```
+
+自动拆装箱注意点
+  - 包装类的`==`运算在不遇到算术运算的情况下不会自动装拆箱，所以此时`==`不是对比包装类中的数值是不是相等，而是对比这两个包装类的对象是不是同一个
+  - 包装类的`equals()`方法不处理数据**转型**的关系，只有当两个包装类为同一类时，才会对比数值，比如Integer的equals方法如下：
+  
+  ```java
+      public boolean equals(Object obj) {
+        if (obj instanceof Integer) {
+            return value == ((Integer)obj).intValue();
+        }
+        return false;
+    }
+  ```
+  
+根据上述规则，可以分析如下代码片段
+  ```java
+  public static void main(String[] args) {
+    Integer a = 1;
+    Integer b = 2;
+    Integer c = 3;
+    Integer d = 3;
+    Integer e = 321;
+    Integer f = 321;
+    Long g = 3L;
+
+    System.out.println(c == d);             // true
+    System.out.println(e == f);             // false
+    System.out.println(c.equals(3));        // true
+    System.out.println(c.equals(d));        // true
+    System.out.println(c == (a + b));       // true
+    System.out.println(c.equals(a + b));    // true
+    System.out.println(g == (a + b));       // true
+    System.out.println(g.equals(a + b));    // false
+  }
+  ```
 
 ## Object相关概念
 
-Object有哪些方法
-== 和 equals 的区别是什么？
-hashCode和equals关系
-toString方法
-clone接口
-为什么要使用克隆
-什么是克隆
-如何实现克隆
-什么是深拷贝
-什么是浅拷贝
-override vs. overload
+
+### == 和 equals 的区别？
+在object中，==表示是引用的是完全同一个对象，而equals表示两者逻辑上等价，可以通过覆盖equals方法定义如何判断值相等。
+
+### hashCode和equals关系
+
+- hashCode()方法用来计算对象的hash值，可以用于基于hash值的集合，如HashMap等。
+- equals()方法用于比较两个对象是不是相等。
+
+基于此我们知道，当两个对象equals()方法返回值相等的话则hashCode()返回值必须相等，反之则不需要。
+
+### Object有哪些常用方法
+- equals()
+- hashCode()
+- toString()
+- notify()
+- clone()
+- wait()
+- getClass()
+
+### 什么是克隆，如何实现克隆
+
+克隆就是生成一个原对象的副本。
+- 方法1：实现`Cloneable`接口，并且重写`clone()`方法。神奇的是其实Object里就有`clone()`方法，可以阅读文章：[Cloneable interface is broken in java](https://howtodoinjava.com/java/cloning/cloneable-interface-is-broken-in-java/)
+- 方法2：通过序列化反序列化实现，但是代价较大。可以实现Serializable接口或者用SerializationUtils。
+
+### 浅拷贝 vs. 深拷贝
+- 浅拷贝：被复制的对象的所有变量（primitive type）都含有与原来的对象相同的值，但是其所引用的对象都还是指向原来的对象
+- 深拷贝：被复制的对象所含有的变量都与原来的对象有相同的值，且其所引用的对象也都被深拷贝了
 
 ## String
 
-String常用的方法
+### String vs. StringBuilder vs. StringBuffer
+
+- String：String是不可变的，如果调用`substring()`、`replace()`等方法，不会影响原String的值。如果直接写String的相加，编译后也会变成StringBuffer的操作。
+- StringBuilder和StringBuffer都是用来进行字符串操作的，但是StringBuilder是单线程场景下使用，更高效。而StringBuffer是多线程场景下使用，线程安全。
+
+### String常用的方法
+- charAt()
+- indexOf()
+- trim()
+- split()
+- getBytes()
+- length()
+- toUpperCase()
+- toLowerCase()
+
 String在内存中的管理方式
 String 属于基础的数据类型吗？
 String str="i"与 String str=new String("i")一样吗？
@@ -45,6 +130,19 @@ String str="i"与 String str=new String("i")一样吗？
 抽象类
 抽象方法
 final
+
+---
+
+### OOP的三大特征
+封装，继承，多态
+
+---
+
+override vs. overload
+ - override: 重写，子类方法覆写父类方法名和参数列表完全相同的方法，是一种多态的表现。子类覆盖父类方法的时候，只可以抛出比弗雷方法更少的异常，或者父类抛出异常的子异常。
+ - overload: 重载，同一个方法名，参数列表不同
+
+---
 
 抽象类必须要有抽象方法吗？
 普通类和抽象类有哪些区别？
@@ -174,6 +272,8 @@ java 中都有哪些引用类型？
 
 类加载的执行过程？
 
+动态链接？静态链接？
+
 怎么判断对象是否可以被回收？
 jvm有哪些垃圾回收算法？
 jvm有哪些垃圾回收器？
@@ -290,7 +390,7 @@ User -> DBMS(UI/API) -> Database engine -> Database
 不同的数据库引擎在存储机制、索引技术、锁的原理等实现上有所差别。
 
 ### 什么是索引
-索引是用来帮助数据库更高效地获得所需数据的数据机构。
+索引是用来帮助数据库更高效地获得所需数据的数据结构。
 
 
 
@@ -394,6 +494,7 @@ zookeeper 的通知机制？
 互斥锁
 
 数的表示
+反码、补码、浮点数
 
 ---
 
