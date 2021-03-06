@@ -95,12 +95,13 @@ public static Integer valueOf(int i) {
 ### 什么是克隆，如何实现克隆
 
 克隆就是生成一个原对象的副本。
-- 方法1：实现`Cloneable`接口，并且重写`clone()`方法。神奇的是其实Object里就有`clone()`方法，可以阅读文章：[Cloneable interface is broken in java](https://howtodoinjava.com/java/cloning/cloneable-interface-is-broken-in-java/)
+- 方法1：实现`Cloneable`接口，并且重写`clone()`方法。神奇的是其实Object里就有`clone()`方法，而`Clonable`接口里是空的。可以阅读文章：[Cloneable interface is broken in java](https://howtodoinjava.com/java/cloning/cloneable-interface-is-broken-in-java/)
 - 方法2：通过序列化反序列化实现，但是代价较大。可以实现Serializable接口或者用SerializationUtils。
+- 方法3：(best practice)用工厂方法来克隆一个对象。调用者可以决定是深拷贝还是浅拷贝，哪些域需要被拷贝而哪些又不需要。
 
 ### 浅拷贝 vs. 深拷贝
-- 浅拷贝：被复制的对象的所有变量（primitive type）都含有与原来的对象相同的值，但是其所引用的对象都还是指向原来的对象
-- 深拷贝：被复制的对象所含有的变量都与原来的对象有相同的值，且其所引用的对象也都被深拷贝了
+- 浅拷贝：被复制的对象的所有基础数据类型变量（primitive type）都含有与原来的对象相同的值，但是其所引用的对象都还是指向原来的对象
+- 深拷贝：被复制的对象所含有的基础数据类型变量都与原来的对象有相同的值，且其所引用的对象也都被深拷贝了
 
 ## String
 
@@ -119,33 +120,35 @@ public static Integer valueOf(int i) {
 - toUpperCase()
 - toLowerCase()
 
-String在内存中的管理方式
-String 属于基础的数据类型吗？
-String str="i"与 String str=new String("i")一样吗？
+### String在内存中的管理方式
+### String 属于基础的数据类型吗？
+### String str="i"与 String str=new String("i")一样吗？
 
 
 ## OOP
 
-接口
-抽象类
-抽象方法
-final
+### 抽象类必须要有抽象方法吗？
+有抽象方法的类必须被声明为抽象类，抽象类未必有抽象方法
 
----
+### 接口
+接口是否可继承接口？可以
+抽象类是否可实现接口？可以
+抽象类是否可继承具体类? 可以
+
 
 ### OOP的三大特征
 封装，继承，多态
 
----
 
-override vs. overload
+### override vs. overload
  - override: 重写，子类方法覆写父类方法名和参数列表完全相同的方法，是一种多态的表现。子类覆盖父类方法的时候，只可以抛出比弗雷方法更少的异常，或者父类抛出异常的子异常。
  - overload: 重载，同一个方法名，参数列表不同
 
----
 
-抽象类必须要有抽象方法吗？
-普通类和抽象类有哪些区别？
+### final 在 java 中有什么作用？
+- 如果用来修饰成员变量，类同常量，不可改变
+- 如果用来修饰类，表示不可以被继承
+- 如果用来修饰方法，则该方法无法被重载(override)
 
 ## 容器
 
@@ -198,7 +201,7 @@ run() vs. start()
 什么是线程池的状态，线程池有哪些状态？
 submit() vs. execute()
 在 java 程序中怎么保证多线程的运行安全？
-什么是ThreadLocal
+什么是ThreadLocal // TODO
 
 锁？
 多线程锁的升级是什么，原理是什么
@@ -214,6 +217,41 @@ synchronized和Lock的区别
 
 ## 反射
 
+### 什么是注解
+注解是Java里一种用来提供源代码相关的元数据的一种方法。Annotation是一个接口，程序可以通过反射来获取指定程序中元素的Annotation对象，然后通过这个Annotation对象来或许元数据信息。
+
+
+### 元注解
+**元注解**是用于修饰注解的注解，通常用在注解的定义上
+Java提供了4中元注解
+- `@Target`：说明了注解修饰的对象，可以更明确地指定其修饰的目标。
+    被这个 @Target 注解修饰的注解将只能作用在成员字段上，不能用于修饰方法或者类。其中，ElementType 是一个枚举类型，有以下一些值：
+    - ElementType.TYPE：允许被修饰的注解作用在类、接口和枚举上
+    - ElementType.FIELD：允许作用在属性字段上
+    - ElementType.METHOD：允许作用在方法上
+    - ElementType.PARAMETER：允许作用在方法参数上
+    - ElementType.CONSTRUCTOR：允许作用在构造器上
+    - ElementType.LOCAL_VARIABLE：允许作用在本地局部变量上
+    - ElementType.ANNOTATION_TYPE：允许作用在注解上
+    - ElementType.PACKAGE：允许作用在包上
+- `@Retention`：注解的生命周期
+    这里的 RetentionPolicy 依然是一个枚举类型，它有以下几个枚举值可取：
+
+    - RetentionPolicy.SOURCE：当前注解编译期可见，不会写入 class 文件
+    - RetentionPolicy.CLASS：类加载阶段丢弃，会写入 class 文件
+    - RetentionPolicy.RUNTIME：永久保存，可以反射获取
+
+    @Retention 注解指定了被修饰的注解的生命周期，一种是只能在编译期可见，编译后会被丢弃，一种会被编译器编译进 class 文件中，无论是类或是方法，乃至字段，他们都是有属性表的，而 JAVA 虚拟机也定义了几种注解属性表用于存储注解信息，但是这种可见性不能带到方法区，类加载时会予以丢弃，最后一种则是永久存在的可见性。
+- `@Documented`：注解是否应当被包含在 JavaDoc 文档中
+- `@Inherited`：是否允许子类继承该注解
+
+### 常用的注解
+除了上述四种元注解外，JDK 还为我们预定义了另外三种注解，它们是：
+- @Override
+- @Deprecated
+- @SuppressWarnings
+
+
 什么是反射
 为什么要反射
 应用场景
@@ -221,8 +259,6 @@ synchronized和Lock的区别
 为什么需要序列化/反序列化
 什么是动态代理
 如何实现动态代理
-什么是注解
-哪几种元注解
 
 ## JVM内存结构
 
@@ -290,6 +326,7 @@ Java会存在内存泄漏吗？会。
 队列和栈是什么？有什么区别？
 
 weak reference vs. soft reference
+强引用、弱引用、软引用、虚引用  // TODO
 
 32位JVM和64位JVM最大堆内存可以达到多少
   - 32位可以达到`2^32`，即4GB。
