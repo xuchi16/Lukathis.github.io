@@ -6,7 +6,7 @@ toc: true
 tags: [Tech, Algo, Binary Tree]
 ---
 
-二叉树。
+二叉树的基本知识及典型题目。
 
 # 二叉树的遍历
 

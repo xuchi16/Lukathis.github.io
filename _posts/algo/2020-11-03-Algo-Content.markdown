@@ -3,69 +3,12 @@ layout: post
 title:  "算法汇总"
 author: Xu Chi
 toc: true
-pinned: true
 tags: [Tech, Algo, Summary]
 ---
 
 算法学习内容汇总，题目来源leetcode。
 
-# 目录
-
-[树]({% post_url /algo/2020-11-04-Binary-Tree %})
-
-[二叉搜索树]
-
-[链表]({% post_url /algo/2020-11-06-Linked-List %})
-
-[字符串]
-
-[栈]
-
-[队列]
-
-[优先队列]
-
-[哈希表]
-
-[前缀树]
-
-[图] 拓扑排序
-
----
-
-[排序]({% post_url /algo/2020-11-03-Sorting %})
-
-[动态规划]({% post_url /algo/2020-11-03-Dynamic-Programming %})
-
-[贪心算法]
-
-[回溯]
-
-[深度优先搜索]
-
-[宽度优先搜索]
-
-[并查集]
-
-[双指针]
-
-[分治]({% post_url /algo/2020-11-03-Divide-And-Conquer %})
-
-[二分查找]({% post_url /algo/2020-11-03-Binary-Search %})
-
-[背包]({% post_url /algo/2020-11-24-Knapsack-Problem %})
-
-[滑动窗口]
-
----
-
-[位运算]
-
-[NP]
-
---- 
-
-# 题目
+# 题目分类
 
 ## 树
 
@@ -328,3 +271,60 @@ tags: [Tech, Algo, Summary]
 | --- | ---- | ---------- | ---------------- | -------- |
 | 146 | LRU缓存机制 | M | | |
 | 155 | 最小栈 | E | | |
+
+
+# 本站相关文章
+
+[树]({% post_url /algo/2020-11-04-Binary-Tree %})
+
+[链表]({% post_url /algo/2020-11-06-Linked-List %})
+
+[二叉搜索树]
+
+[字符串]
+
+[栈]
+
+[队列]
+
+[优先队列]
+
+[哈希表]
+
+[前缀树]
+
+[图] 拓扑排序
+
+---
+
+[排序]
+
+[动态规划]({% post_url /algo/2020-11-03-Dynamic-Programming %})
+
+[贪心算法]
+
+[回溯]
+
+[深度优先搜索]
+
+[宽度优先搜索]
+
+[并查集]
+
+[双指针]
+
+[分治]
+
+[二分查找]
+
+[背包]({% post_url /algo/2020-11-24-Knapsack-Problem %})
+
+[滑动窗口]
+
+---
+
+[位运算]
+
+[NP]
+
+--- 

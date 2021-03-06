@@ -7,7 +7,7 @@ math: true
 tags: [Tech, Algo, Linked-list]
 ---
 
-Description
+链表的基础知识。
 
 # Introduction
 

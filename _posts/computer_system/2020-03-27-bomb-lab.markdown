@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Bomb Lab"
+title:  "[CSAPP] Bomb Lab"
 author: Xu Chi
 toc: true
 tags: [Tech, 深入理解计算机系统]
@@ -8,13 +8,13 @@ tags: [Tech, 深入理解计算机系统]
 
 CSAPP Lab 2. Bomb lab
 
-### 系统环境
+# 系统环境
 
 在之前data lab的实验中，需要32位的操作系统，而在bomb lab中，需要64位操作系统才可以正常进行。我们这次使用的是ubuntu1604x64。如何查看你的Linux系统是32位还是64位，可以用`getconf LONG_BIT`检查。
 
 ---
 
-### 下载实验包并关联repo
+# 下载实验包并关联repo
 
 需要更新下系统中的相关工具。
 
@@ -25,7 +25,9 @@ apt-get install gdb
 ```
 ---
 
-### 一些有用的命令
+# 一些有用的命令
+
+## commands
 
 * 生成symbol table: `objdump -t bomb`
 
@@ -45,7 +47,7 @@ SYNOPSIS
                objfile...
 ```
 
-### gdb
+## gdb
 
 ```
 break 
@@ -59,7 +61,7 @@ backtrace(bt) // backtrace
 ```
 ---
 
-### Assembly commands
+## Assembly operations
 
 | command | description |
 |:--|:--|
@@ -69,15 +71,9 @@ backtrace(bt) // backtrace
 | push | 压栈 |
 | lea | load effective address，即利用通用的操作数表示格式读取数值后放入寄存器的操作 |
 
----
+# 前置知识
 
-### 操作数表示格式
-
-P113
-
----
-
-### Registers
+## Registers
 
 There're 16 registers and one stack pointer
 
@@ -106,6 +102,29 @@ rip            程序指令寄存器，指向下一条执行指令
 将一个双字压入栈中，栈顶指针减4。（原因？）
 
 ???如`sub    $0x8,%rsp`表示在%rsp减小一个立即数（immediate）8。如果是32位系统，压入一个元素地址减4（4*8=32），而64位操作系统，压入数据为64（8\*8=64）位，因此栈顶地址减4。
+
+### Argument passed in registers
+
+* Parameters: %rdi, %rsi, %rdx, %rcx, %r8, %r9
+
+### Caller saved / Callee saved registers
+
+对于callee-saved寄存器，被调函数如果想使用上述寄存器，它需要负责拷贝并保存上述寄存器的内容。并确保将控制权交还给caller的时候上述寄存器值被恢复。 
+
+对于caller-saved寄存器，调用其他函数时，需要将这些寄存器内容保存下来，当调用结束后，需要恢复这些寄存器的值。
+
+* Callee saved: %rbx, %r12, %r13, %r14, %rbp, %rsp
+* Caller saved: %rdi, %rsi, %rdx, %rcx, %r8, %r9, %r10, %r11
+
+### Registers with special functionality
+
+* return value: %rax
+* stack pointer: %rsp
+
+## 操作数表示格式
+
+P113
+
 
 # 解题
 

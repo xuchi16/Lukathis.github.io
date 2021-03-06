@@ -4,7 +4,6 @@ title:  "Java 面试题"
 author: Xu Chi
 toc: true
 tags: [Tech, Java]
-pinned: true
 ---
 
 Java常见面试题整理。

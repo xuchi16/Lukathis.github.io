@@ -63,14 +63,6 @@ Happy hacking!
 
 6. 然后在浏览器中访问 http://localhost:3000 即可
 
-# 设置Lint
-
-TBD
-
-# 关联Git
-
-TBD
-
 # Appendix
 
 [官方网站环境配置](https://zh-hans.reactjs.org/tutorial/tutorial.html#setup-option-2-local-development-environment)
