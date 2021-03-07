@@ -4,7 +4,7 @@ title:  "Linked List - 链表"
 author: Xu Chi
 toc: true
 math: true
-tags: [Tech, Algo, Linked-list]
+tags: [Tech, Algo]
 ---
 
 链表的基础知识。

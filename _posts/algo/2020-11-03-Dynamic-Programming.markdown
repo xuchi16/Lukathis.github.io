@@ -4,7 +4,7 @@ title:  "Dynamic Programming 动态规划"
 author: Xu Chi
 toc: true
 math: true
-tags: [Tech, Algo, DP]
+tags: [Tech, Algo]
 ---
 
 > 事实上，对每一道动态规划题目都思考其方程的意义以及如何得来，是加深对动态规划的理解、提高动态规划功力的好方法。 -《背包九讲》

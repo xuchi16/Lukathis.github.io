@@ -3,7 +3,7 @@ layout: post
 title:  "Binary Tree 二叉树"
 author: Xu Chi
 toc: true
-tags: [Tech, Algo, Binary Tree]
+tags: [Tech, Algo]
 ---
 
 二叉树的基本知识及典型题目。
