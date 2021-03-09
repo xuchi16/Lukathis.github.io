@@ -1,48 +1,15 @@
 ---
 layout: post
-title:  "[CFA] Quantitative methods"
+title:  "Quantitative methods"
 author: Xu Chi
 toc: true
 math: true
-tags: [Finance, CFA, Quantitative]
+tags: [Finance, Quantitative]
 ---
 
-数量统计中一些重点和易错概念。
+数量统计中一些重点和概念。
 
 ---
-
-# Time value of money
-
-## Fischer's Effect
-
-## EAR or EAY
-
-## Annuity
-
-
-名义利率
-
-无风险利率
-
-费雪方程式
-
-Lump sum
-
-复利计算公式
-
-连续计息的复利计算公式
-
-Stated annual rate
-
-年金
-
-后付年金（默认，容易计算）
-
-先付年金：先计算后付年金，再滚一期
-
-永续债的计算
-
-Sharpe ratio
 
 # Statistical concepts 统计
 
@@ -191,8 +158,6 @@ $$
 | LIN | 计算两组数据标准差，此时Y01,Y02等作为第二组数据，LIN表示线性回归 |
 | Ln | 计算两组数据标准差，此时Y01,Y02等作为第二组数据，Ln表示指数回归 |
 | EXP | 计算两组数据标准差，此时Y01,Y02等作为第二组数据，EXP表示乘方回归 |
-
-注: [线性回归]({% post_url /ml/2020-11-07-Linear-Regression %})
 
 ## Chebyshev's inequality
 
