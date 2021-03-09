@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Linked List - 链表"
+title:  "Linked List"
 author: Xu Chi
 toc: true
 math: true
 tags: [Tech, Algo]
 ---
 
-链表的基础知识。
+链表典型题目及小结。
 
 # Introduction
 

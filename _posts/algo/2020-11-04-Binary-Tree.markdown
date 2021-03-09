@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Binary Tree 二叉树"
+title:  "Binary Tree"
 author: Xu Chi
 toc: true
 tags: [Tech, Algo]
 ---
 
-二叉树的基本知识及典型题目。
+二叉树典型题目及小结。
 
 # 二叉树的遍历
 

@@ -4,12 +4,12 @@ title:  "Understand Portfolio Management"
 author: Xu Chi
 toc: true
 math: true
-tags: [Finance, CFA, Portfolio]
+tags: [Finance, Portfolio]
 ---
 
 使用Portfolio进行投资是一种有利于分散风险的投资方式。
 
-# 我要投资
+# 如果我们要投资
 
 当我有一笔钱在手，我希望进行投资来帮助我保值或者增值。
 我们便可以开始思考，第一个想到的一定是结果：我要多赚，少亏。多赚意味着希望获得更高的收益，少亏意味着希望更小的风险。
@@ -84,7 +84,3 @@ $$
 U = E(r) - \frac{1}{2}A{\sigma}^{2}
 
 $$
-
-# 不同的组合是如何分布的
-
-TBD
