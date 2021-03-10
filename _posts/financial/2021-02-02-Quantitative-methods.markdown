@@ -25,7 +25,7 @@ tags: [Finance, Quantitative]
 
 统计学分为Descriptive statistics和Inferential statistics。
 
-### Poulation vs. Sample
+### Population vs. Sample
 
 | Name | Definition | Name of feature |
 | :--- | :--- | :--- |
