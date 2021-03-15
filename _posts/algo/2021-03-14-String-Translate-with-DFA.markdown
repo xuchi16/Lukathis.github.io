@@ -64,7 +64,7 @@ LeetCode [8. 字符串转换整数 (atoi)](https://leetcode-cn.com/problems/stri
 
 在上述状态的基础上我们也很快能够分析出他们之间的转移方式，如下图所示。
 
-![字符串转换整数-状态转移图.png](/img/algo/状态转移图.png){:height="60%" width="60%" }
+![状态转移图](/img/algo/state-transform-diagram.png){:height="75%" width="75%" }
 
 当我们厘清了状态及其转移方式后，我们可以利用一个二维表来记录这个有向图。
 每一行代表从行首的状态出发，在接收到了列首的字符后它将去到的状态，如下表所示。
@@ -162,10 +162,210 @@ enum State {
 # 状态模式
 
 本题的解题步骤也让我们很容易想起设计模式中的**状态模式**，它允许对象在内部状态改变的时候改变它的行为。
-我们可以利用状态模式，对本题的解法进行改写。TBD。
+我们可以利用状态模式，对本题的解法进行改写，我们将字符的处理利用多态放到每个状态的内部。
+让我们看看用状态模式可以写出怎样的长篇大论:)
 
+![状态类图](/img/algo/state-pattern-UML.png){:height="75%" width="75%" }
 
-# 附录：直接处理字符串解法
+```java
+class Solution {
+    public int myAtoi(String s) {
+        Automation machine = new Automation();
+        for (int i = 0; i < s.length(); i++) {
+            machine.handle(s.charAt(i));
+            if (machine.getState() instanceof EndState) return machine.getResult();
+        }
+        return machine.getResult();
+    }
+}
+
+class Automation {
+    private int number;
+    private int signed;
+    private State state;
+    private final State startState;
+    private final State signedState;
+    private final State numberState;
+    private final State endState;
+
+    public Automation() {
+        this.startState = new StartState(this);
+        this.signedState = new SignedState(this);
+        this.numberState = new NumberState(this);
+        this.endState = new EndState(this);
+        this.state = startState;
+        this.number = 0;
+        this.signed = 1;
+    }
+
+    public void handle(char c) {
+        this.state.handle(c);
+    }
+
+    public int getResult() {
+        return signed * number;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public int getSigned() {
+        return signed;
+    }
+
+    public void setSigned(int signed) {
+        this.signed = signed;
+    }
+
+    // States
+    public void setState(State state) {
+        this.state = state;
+    }
+
+    public State getState() {
+        return state;
+    }
+
+    public State getStartState() {
+        return startState;
+    }
+
+    public State getSignedState() {
+        return signedState;
+    }
+
+    public State getNumberState() {
+        return numberState;
+    }
+
+    public State getEndState() {
+        return endState;
+    }
+
+}
+
+abstract class State {
+    Automation machine;
+
+    public State(Automation machine) {
+        this.machine = machine;
+    }
+    public abstract void handle(char c);
+}
+
+class StartState extends State {
+
+    StartState(Automation machine) {
+        super(machine);
+    }
+
+    @Override
+    public void handle(char c) {
+        InputType inputType = StateHelper.parseInput(c);
+        if (inputType == InputType.SPACE) {
+            return;
+        } else if (inputType == InputType.OPERATOR) {
+            machine.setState(machine.getSignedState());
+            int signed = c == '+' ? 1 : -1;
+            machine.setSigned(signed);
+        } else if (inputType == InputType.NUMBER) {
+            machine.setState(machine.getNumberState());
+            machine.setNumber(c - '0');
+        } else {
+            machine.setState(machine.getEndState());
+        }
+    }
+}
+
+class SignedState extends State {
+    
+    SignedState(Automation machine) {
+        super(machine);
+    }
+    
+    @Override
+    public void handle(char c) {
+        InputType inputType = StateHelper.parseInput(c);
+        if (inputType == InputType.SPACE) {
+            machine.setState(machine.getEndState());
+        } else if (inputType == InputType.OPERATOR) {
+            machine.setState(machine.getEndState());
+        } else if (inputType == InputType.NUMBER) {
+            machine.setState(machine.getNumberState());
+            machine.setNumber(c - '0');
+        } else {
+            machine.setState(machine.getEndState());
+        }
+    }
+}
+
+class NumberState extends State {
+    
+    NumberState(Automation machine) {
+        super(machine);
+    }
+    
+    @Override
+    public void handle(char c) {
+        InputType inputType = StateHelper.parseInput(c);
+        if (inputType == InputType.SPACE) {
+            machine.setState(machine.getEndState());
+        } else if (inputType == InputType.OPERATOR) {
+            machine.setState(machine.getEndState());
+        } else if (inputType == InputType.NUMBER) {
+            machine.setState(machine.getNumberState());
+            int currNumber = machine.getNumber();
+            int nextDigit = c - '0';
+            if (machine.getSigned() > 0 && ((currNumber > Integer.MAX_VALUE / 10) || (currNumber == Integer.MAX_VALUE / 10 && nextDigit > Integer.MAX_VALUE % 10))) {
+                machine.setNumber(Integer.MAX_VALUE);
+                machine.setState(machine.getEndState());
+            } else if (machine.getSigned() < 0 && ((currNumber > -(Integer.MIN_VALUE / 10)) || (currNumber == -(Integer.MIN_VALUE / 10) && nextDigit > -(Integer.MIN_VALUE % 10)))) {
+                machine.setNumber(-Integer.MIN_VALUE);
+                machine.setState(machine.getEndState());
+            } else {
+                currNumber = currNumber * 10 + nextDigit;
+                machine.setNumber(currNumber);
+            }
+        } else {
+            machine.setState(machine.getEndState());
+        }
+    }
+}
+
+class EndState extends State {
+
+    EndState(Automation machine) {
+        super(machine);
+    }
+    
+    @Override
+    public void handle(char c) {
+        return;
+    }
+}
+
+class StateHelper {
+    public static InputType parseInput(char c) {
+        if (c == ' ') return InputType.SPACE;
+        if (c == '+' || c == '-') return InputType.OPERATOR;
+        if (c >= '0' && c <= '9') return InputType.NUMBER;
+        return InputType.OTHER;
+    }
+}
+
+enum InputType {
+    SPACE, OPERATOR, NUMBER, OTHER
+}
+```
+
+# 附录
+
+直接处理字符串解法（来自LeetCode)
 
 ```java
 class Solution {
